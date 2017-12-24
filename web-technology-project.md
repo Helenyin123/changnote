@@ -61,7 +61,7 @@ Attributes add additional information to tags. It's in key-value pair form like 
 
 name is the name of the attributes, content is the content of the attributes
 
-&lt;a href="\[\[\[[http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\](http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29\)\) to Google&lt;/a&gt;  Insert a Link
+&lt;a href="\[\[\[\[[http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\)\](http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29%29\)\) to Google&lt;/a&gt;  Insert a Link
 
 &lt;img src=""&gt;  Insert an image
 
@@ -241,7 +241,7 @@ li {}  h1 {}  p{}
 **3. Class - a class can be used many times**
 
 ```css
-.completed{} .done{} 
+.completed{} .done{}
 ```
 
 **4.** **Star - select every element in the page**
@@ -261,7 +261,6 @@ p div {} /*select all <div> inside of <p>*/
 
 ```css
 h1 + h2 {} /*select all h2 that is adjacent to h1*/
-
 ```
 
 **7. Attribute Selector - select all elements based on that attribute**
@@ -278,7 +277,16 @@ input[type="text"] {} /*select all <input> with type="text"*/
 ul:nth-of-type(3) {} /*select the 3rd ul*/
 ```
 
-**Inheritance: **Children will inherit the css style of its parent. 
+**9. Special Selectors**
+
+```css
+h1:hover {} /*change the style of h1 when mouse hover on it*/
+h1:first-letter {} /*change the style of first letter of h1*/
+a:visited{} /*change the style of a link if it's visited*/
+input:checked{} /*change the style of a checkbox if it's checked*/
+```
+
+**Inheritance: **Children will inherit the css style of its parent.
 
 **Specificity: **if there are more than one style targeting an element,  whichever selector that is more specific will win. To know which selector wins, we can use css specificity calculator.
 
