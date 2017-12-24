@@ -61,7 +61,7 @@ Attributes add additional information to tags. It's in key-value pair form like 
 
 name is the name of the attributes, content is the content of the attributes
 
-&lt;a href="\[\[[http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\](http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29\)\) to Google&lt;/a&gt;  Insert a Link
+&lt;a href="\[\[\[[http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\](http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29\)\) to Google&lt;/a&gt;  Insert a Link
 
 &lt;img src=""&gt;  Insert an image
 
@@ -188,11 +188,11 @@ we want to add a link tag in html head tag \(sublime: link + tab\)
 
 6 hexadecimal numbers = RGB\(256, 256, 256\) \(Red + Green + Blue\)  `color:#FF0401;`
 
-2. RGB: 3channels: Red, Green, Blue, each range from 0-255
+1. RGB: 3channels: Red, Green, Blue, each range from 0-255
 
 `color:rgb(0,255,0);`
 
-3. RGBA : like RGB, but with an alpha\(transparent\) channel, range from 0.0-1.0\(0.0 means total transparent\)
+1. RGBA : like RGB, but with an alpha\(transparent\) channel, range from 0.0-1.0\(0.0 means total transparent\)
 
 `color:rgba(11, 99, 150, 0.6)`
 
@@ -226,15 +226,63 @@ h1 {
 
 #### Selector
 
-**1.Element**
+**1.Element/ Type Selector**
 
+```css
+li {}  h1 {}  p{}
+```
 
+**2. ID - an unique id can only appear once in html page**
 
-**2.ID**
+```css
+#name{} #id{} #special{}
+```
 
-**3.Class**
+**3. Class - a class can be used many times**
 
+```css
+.completed{} .done{} 
+```
 
+**4.** **Star - select every element in the page**
+
+```css
+*{}
+```
+
+**5. Descendant Selector -  the second element must nested in the first element**
+
+```css
+li a {} /*select all the <a> inside of <li>*/
+p div {} /*select all <div> inside of <p>*/
+```
+
+**6. Adjacent Selector - the second element is next to the first element**
+
+```css
+h1 + h2 {} /*select all h2 that is adjacent to h1*/
+
+```
+
+**7. Attribute Selector - select all elements based on that attribute**
+
+```css
+tag[attribute="content"] {} /*select all tags with that attribute="content"*/
+a[href="http://www.google.com"] {} /*select all <a> with href="http://www.google.com"*/
+input[type="text"] {} /*select all <input> with type="text"*/
+```
+
+**8. nth of type - select the nth element of that type**
+
+```css
+ul:nth-of-type(3) {} /*select the 3rd ul*/
+```
+
+**Inheritance: **Children will inherit the css style of its parent. 
+
+**Specificity: **if there are more than one style targeting an element,  whichever selector that is more specific will win. To know which selector wins, we can use css specificity calculator.
+
+Type selector &lt; class selector/attribute selector &lt; ID selector
 
 # Backend Part
 
