@@ -2,7 +2,7 @@
 
 ## 1. HTML - Hyper Text Markup Language
 
-#### Boilerplate
+**Boilerplate**
 
 sublime text: html + tab
 
@@ -18,17 +18,19 @@ sublime text: html + tab
 </html>
 ```
 
-#### Header
+**Header**
 
-**&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;**
+&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;
 
-#### Inline
+**Inline**
 
-**&lt;em&gt; **or **&lt;i&gt;**  Italic  
-**&lt;strong&gt;** or **&lt;b&gt; ** Bold  
-**&lt;u&gt;**  underline
+&lt;em&gt; or &lt;i&gt;  Italic  
+&lt;strong&gt; or &lt;b&gt;  Bold  
+&lt;u&gt;  underline
 
-#### Ordered List
+#### List
+
+**1.Ordered List**
 
 ```html
 <ol>
@@ -38,17 +40,16 @@ sublime text: html + tab
 </ol>
 ```
 
-#### UnOrdered List
+**2. UnOrdered List**
 
 ```html
-<ul>
     <li>point 1</li>
     <li>point 2</li>
     <li>point 3</li>
 </ul>
 ```
 
-#### General Container
+**General Container**
 
 &lt;div&gt;&lt;/div&gt;   block level container
 
@@ -60,7 +61,7 @@ Attributes add additional information to tags. It's in key-value pair form like 
 
 name is the name of the attributes, content is the content of the attributes
 
-&lt;a href="http://www.google.com"&gt;Go to Google&lt;/a&gt;  Insert a Link
+&lt;a href="\[\[[http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\](http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29\)\) to Google&lt;/a&gt;  Insert a Link
 
 &lt;img src=""&gt;  Insert an image
 
@@ -159,6 +160,81 @@ name is the name of the attributes, content is the content of the attributes
 ```
 
 ## 2. CSS - Cascading Style Sheet
+
+**General Rule**
+
+```css
+selector {
+    property:value;
+}
+```
+
+**Connect CSS and HTML file **
+
+Inline and style tag method are not very good method to add css to html. Inline will need to change every elements in the html even if they are in  the same style, it will be a very heavy work if the page is very large. The problem of style tag is that we want to separate css with html, we don't want css nested in html.
+
+we want to add a link tag in html head tag \(sublime: link + tab\)
+
+```html
+<head>
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="filename.css">
+</head>
+```
+
+**Color in CSS**
+
+1.Hexadecimal: \# + 6 hexadecimal numbers\(0-F\)
+
+6 hexadecimal numbers = RGB\(256, 256, 256\) \(Red + Green + Blue\)  `color:#FF0401;`
+
+2. RGB: 3channels: Red, Green, Blue, each range from 0-255
+
+`color:rgb(0,255,0);`
+
+3. RGBA : like RGB, but with an alpha\(transparent\) channel, range from 0.0-1.0\(0.0 means total transparent\)
+
+`color:rgba(11, 99, 150, 0.6)`
+
+**Background**
+
+we use color to set text color and use background to set background color. background could also set as an image.
+
+```css
+body {
+    background: url(http://anguerde.com/pics/main/56/406435-wooden-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+```
+
+**Border**
+
+border setting consists of three parts: color, width, style
+
+```css
+h1 {
+    border: 2px dashed rgb(255,0,0);
+}
+OR
+h1 {
+    border-color: purple;
+    border-width: 1px;
+    border-style: solid/dashed;
+}
+```
+
+#### Selector
+
+**1.Element**
+
+
+
+**2.ID**
+
+**3.Class**
+
+
 
 # Backend Part
 
