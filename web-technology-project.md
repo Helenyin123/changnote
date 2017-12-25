@@ -61,7 +61,7 @@ Attributes add additional information to tags. It's in key-value pair form like 
 
 name is the name of the attributes, content is the content of the attributes
 
-&lt;a href="\[\[\[\[[http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\)\](http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29%29\)\) to Google&lt;/a&gt;  Insert a Link
+&lt;a href="\[\[\[\[\[[http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\)\)\](http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29%29%29\)\) to Google&lt;/a&gt;  Insert a Link
 
 &lt;img src=""&gt;  Insert an image
 
@@ -291,6 +291,31 @@ input:checked{} /*change the style of a checkbox if it's checked*/
 **Specificity: **if there are more than one style targeting an element,  whichever selector that is more specific will win. To know which selector wins, we can use css specificity calculator.
 
 Type selector &lt; class selector/attribute selector &lt; ID selector
+
+#### Font
+
+**1.font family**
+
+font family property specifies a font name from the font family for the selected element. If font name have digit at the beginning, you must add double quotes to the font
+
+```css
+p {font-family: Arial} 
+h1 {font-family: "1sansif"}
+```
+
+**2. font size**
+
+one method to set font size is specifies the pixels of the font size. The other is using "em" values, it is relatively font size meams
+
+```css
+body {font-size: 10px;}
+p {font-size：2em;} ／*value 2 is a multiplier of the current em size*／
+em = desired element pixel value / parent element font-size in pixels
+```
+
+# 
+
+# 
 
 # Backend Part
 
