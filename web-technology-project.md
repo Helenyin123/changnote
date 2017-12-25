@@ -17,6 +17,7 @@ sublime text: html + tab
 </body>
 </html>
 ```
+
 **Header**
 
 **&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;**
@@ -336,6 +337,29 @@ In a document, each element is represented as a rectangular box. In CSS, each of
 
 ![](https://www.codeproject.com/KB/HTML/567385/boxmodel-image.png)
 
+**Content, Padding\(space between content and border\), Border, Margin\(space outside of border\)**
+
+```css
+p {
+    /*content*/
+    width: 100px;
+    width: 50% /*50% of its parent element, if the window size change, the width of p will also change.*/ 
+    height: 100px;
+    /*padding*/
+    padding: 100px;
+    padding-top: 20px;
+    padding-bottom : 30px;
+    /*border*/
+    border: 1px purple solid
+    border-left: 1px black solid
+    border-right: 2px orange dashed
+    /*margin*/
+    margin: 20px, 40px, 400px, 100px; /*top, right, bottom, left*/
+    margin: 0 auto; /*top, right and repeat on bottom, left*/
+    /*auto means that the value of that property is adjusted automatically according to the content*/
+    margin-top: 20px; 
+    }
+```
 
 # Backend Part
 
