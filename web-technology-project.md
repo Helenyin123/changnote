@@ -61,7 +61,7 @@ Attributes add additional information to tags. It's in key-value pair form like 
 
 name is the name of the attributes, content is the content of the attributes
 
-&lt;a href="\[\[\[\[\[\[[http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\]\(http://www.google.com"&gt;Go\)\)\)\)\)\](http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go]%28http://www.google.com">Go%29%29%29%29%29\)\) to Google&lt;/a&gt;  Insert a Link
+&lt;a href="linkToGoogle"&gt;Go to Google&lt;/a&gt;  Insert a Link
 
 &lt;img src=""&gt;  Insert an image
 
@@ -317,7 +317,7 @@ div {font-size: 0.65em} /*font size is 0.65 * parent font size*/
 
 **3. font weight**
 
-font-weight specifies the boldness of the font. The values of this property are normal, bold, bolder, lighter, 100, 200, 300, ... , 800, 900. 
+font-weight specifies the boldness of the font. The values of this property are normal, bold, bolder, lighter, 100, 200, 300, ... , 800, 900.
 
 **4. line height**
 
@@ -329,7 +329,7 @@ text align specifies how the text is aligned. The value are right, center, left
 
 **6. text decoration**
 
-text decoration gives underline or line through or overline effect 
+text decoration gives underline or line through or overline effect
 
 # Backend Part
 
