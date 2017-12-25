@@ -17,10 +17,9 @@ sublime text: html + tab
 </body>
 </html>
 ```
-
 **Header**
 
-&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;
+**&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;**
 
 **Inline**
 
@@ -330,6 +329,13 @@ text align specifies how the text is aligned. The value are right, center, left
 **6. text decoration**
 
 text decoration gives underline or line through or overline effect
+
+**The Box Model**
+
+In a document, each element is represented as a rectangular box. In CSS, each of this rectangular boxes is described using box model. Each box has four edges: the margin edge, border edge, padding edge and content edge.
+
+![](https://www.codeproject.com/KB/HTML/567385/boxmodel-image.png)
+
 
 # Backend Part
 
