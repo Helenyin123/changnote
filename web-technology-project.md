@@ -305,14 +305,16 @@ h1 {font-family: "1sansif"}
 
 **2. font size**
 
-one method to set font size is specifies the pixels of the font size. The other is using "em" values, it is relatively font size means dynamic. it will automatically adapts its length relative to the font that the reader choose to use.
+one method to set font size is specifies the pixels of the font size. The other is using "em" values, it is relatively font size means dynamic. it will automatically adapts its length relative to the font that the reader choose to use. It might cause compounding problem. Another value is "rem", it is relative to the root html element\(default setting or personal setting\), not parent element. It let you specify a font size in a relative fashion without being affected by the size of the parent, thereby eliminating compounding problem.
 
 em = desired element pixel value / parent element font-size in pixels
+
+rem = desired element pixel value / root element font-size in pixels
 
 ```css
 body {font-size: 10px;}
 p {font-size：2em;} /*value 2 is a multiplier of the current em size*/
-div {font-size: 0.65em} /*font size is 0.65 * parent font size*/
+div {font-size: 0.65rem} /*font size is 0.65 * body font size*/
 ```
 
 **3. font weight**
