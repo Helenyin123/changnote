@@ -363,9 +363,13 @@ p {
     }
 ```
 
-# 
+## 3. Bootstrap
 
-# 
+Bootstrap is the most popular HTML, CSS and JS framework for designing website. You can download it and link to the file locally, or use CDN support, which is an online server for bootstrap, you just need to add a link to the html header. 
+
+**Jumbotron**
+
+
 
 # Backend Part
 
