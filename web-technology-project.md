@@ -395,6 +395,22 @@ Use grid to build layout by 12 column system.
 
 When we want to use double quote inside a string, use escape character "\" `"I know \"king of mine\" means" = "I know "king of mine" means".` When we want to use backslash, do `backslash \\" = backslash \`
 
+**Variable: **A container that stores different value, define a variable: `var name = value;` 
+
+variable name follows **camel case:** the first name is lowercase, next word be uppercase. eg. camelCase
+
+**snake case:** words are separated by \__. eg. _snake_\__case
+
+**kebab case:** words are separated by -. eg. kebab-case
+
+**Dynamic Typing:** variable can change from one type to another.
+
+```js
+var name = 80;
+name = "Sally"
+name = "80" - 10 = "70"
+```
+
 # Backend Part
 
 ## 1. The Command Line
