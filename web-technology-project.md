@@ -399,6 +399,20 @@ There are five primitive types: Numbers, Strings, Boolean, Null, Undefined.
 
 When we want to use double quote inside a string, use escape character "\" `"I know \"king of mine\" means" = "I know "king of mine" means".` When we want to use backslash, do `backslash \\" = backslash \`
 
+**Boolean: True and False**
+
+**Comparison Operators:  **"==" equal to value, "!=" not equal to value, "===" equal value and type, "!==" not equal value or equal type.
+
+"==" performs type coercion, while "=== does not." 
+
+```js
+var a = 5; var b = "5"
+a == b; // true
+a != b; // false
+a === b;  //False
+a !== b; // true
+```
+
 **Variable: **A container that stores different value, define a variable: `var name = value;`
 
 In Javascript, variable name follows **camel case:** the first name is lowercase, next word be uppercase. eg. camelCase.
@@ -457,8 +471,6 @@ Link HTML and JavaScript file: use &lt;script src="url"&gt;&lt;/script&gt; tag, 
     <script src="app.js"></script>
 </head>
 ```
-
-
 
 # 
 
