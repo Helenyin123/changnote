@@ -1,3 +1,6 @@
+
+---
+
 # Frontend Part
 
 ## 1. HTML - Hyper Text Markup Language
@@ -403,7 +406,7 @@ When we want to use double quote inside a string, use escape character "\" `"I k
 
 **Comparison Operators:  **"==" equal to value, "!=" not equal to value, "===" equal value and type, "!==" not equal value or equal type.
 
-"==" performs type coercion, while "=== does not." 
+"==" performs type coercion, while "=== does not."
 
 ```js
 var a = 5; var b = "5"
