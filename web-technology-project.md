@@ -387,9 +387,13 @@ Use grid to build layout by 12 column system.
 
 ## 4. JavaScript
 
-**console: **chrome -view- javascript console
+#### Primitive Type
 
-**Primitive Type:** Numbers, Strings, Boolean, Null, Undefined
+There are five primitive types: Numbers, Strings, Boolean, Null, Undefined.
+
+**find console in chrome: **chrome -view- javascript console
+
+**Numbers:** numbers include all kinds of form, eg. positive number, negative number, integer, float number
 
 **String:** both single or double quote is ok for string. When there is a single quote in the string, we must use double quote, like `"I can't stop imagine".`
 
@@ -409,6 +413,40 @@ In Javascript, variable name follows **camel case:** the first name is lowercase
 var name = 80;
 name = "Sally"
 name = "80" - 10 = "70"
+```
+
+**Null: **explicitly nothing or empty
+
+**Undefined: **Variables that are declared, but not initialized. If a variable is not declared at all, the system will throw an error message, not undefined value.
+
+```js
+var currentPlayer = "charlie";
+currentPlayer = null;
+
+//undefined
+var name;
+var age;
+
+//throw reference error
+color
+```
+
+#### Built in Methods
+
+**alert\(content\): **pops up a message to alert user
+
+**prompt\(content\): **get input from user
+
+**console.log\(content\):** print something to javascript console
+
+**clear\(\): **clear the javascript console
+
+```js
+alert("You can't open this page");
+alert(900 * 40);
+console.log("This can only show in console");
+var username = prompt("what is your username?");
+clear();
 ```
 
 # Backend Part
