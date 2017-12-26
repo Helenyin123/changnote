@@ -402,7 +402,16 @@ There are five primitive types: Numbers, Strings, Boolean, Null, Undefined.
 
 When we want to use double quote inside a string, use escape character "\" `"I know \"king of mine\" means" = "I know "king of mine" means".` When we want to use backslash, do `backslash \\" = backslash \`
 
-**Boolean: True and False**
+**Boolean: **true and false. Value aren't actually true or false, are still inherently "truthy" or "falsey" when evaluated in a boolean context. Falsy value: false, 0, "", null, undefined, NaN.
+
+```js
+!!"" // false
+!!NaN // false
+!!"false" //true
+!!-1 //true
+// Falsy value: false, 0, "", null, undefined, NaN
+//  everything else is truthy
+```
 
 **Comparison Operators:  **"==" equal to value, "!=" not equal to value, "===" equal value and type, "!==" not equal value or equal type.
 
@@ -414,6 +423,17 @@ a == b; // true
 a != b; // false
 a === b;  //False
 a !== b; // true
+
+var y = null;
+y == undefined; //true
+y === undefined; //false
+
+true == "1"; //true
+true == "12"; //false
+false == "0"; //true
+null == undefined; //true
+NaN == NaN //false
+// NaN: not a number
 ```
 
 **Variable: **A container that stores different value, define a variable: `var name = value;`
@@ -431,6 +451,8 @@ var name = 80;
 name = "Sally"
 name = "80" - 10 = "70"
 ```
+
+**Cast Type:** If we want to convert a string to number, we can use Number\("80"\) to cast the type, or String\(90\)
 
 **Null: **explicitly nothing or empty
 
