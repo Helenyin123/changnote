@@ -365,11 +365,35 @@ p {
 
 ## 3. Bootstrap
 
-Bootstrap is the most popular HTML, CSS and JS framework for designing website. You can download it and link to the file locally, or use CDN support, which is an online server for bootstrap, you just need to add a link to the html header. 
+Bootstrap is the most popular HTML, CSS and JS framework for designing website. You can download it and link to the file locally, or use CDN support, which is an online server for bootstrap, you just need to add a link to the html header.
 
-**Jumbotron**
+**Button, Jumbotron, Navigation Bar**
 
+**Form**
 
+classes to make the form organized. _**".form-group"** \_add some spacing between each group of elements. _**".form-control" **_add focus effect, padding, border to the input tag. _**".form-inline"**\_ wrap the entire form in one line.
+
+#### **Grid System**
+
+Use grid to build layout by 12 column system.
+
+**Container: **container provide a means to center and horizontally pad site's content**.**
+
+**Rows: **wrappers for columns. Each column has horizontal padding for controlling the space between them. This padding is counteracted on the rows with negative margins.
+
+**Columns:** content must be placed within columns and only columns may be immediate children of rows. Columns without a specified width will automatically layout as equal width columns. Column width are set in percentages, so they're dynamic and sized relative to their parent element.
+
+**Four Different Sizes: **Extra Small\(Phone\)         Small\(Tablet\)         Medium\(Desktop\)      Large\(Desktop\)
+
+## 4. JavaScript
+
+**console: **chrome -view- javascript console
+
+**Primitive Type:** Numbers, Strings, Boolean, Null, Undefined
+
+**String:** both single or double quote is ok for string. When there is a single quote in the string, we must use double quote, like `"I can't stop imagine".`
+
+When we want to use double quote inside a string, use escape character "\" `"I know \"king of mine\" means" = "I know "king of mine" means".` When we want to use backslash, do `backslash \\" = backslash \`
 
 # Backend Part
 
