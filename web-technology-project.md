@@ -449,6 +449,21 @@ var username = prompt("what is your username?");
 clear();
 ```
 
+Link HTML and JavaScript file: use &lt;script src="url"&gt;&lt;/script&gt; tag, in sublime do script + tab
+
+```html
+<head>    
+    <title>Demo</title>
+    <script src="app.js"></script>
+</head>
+```
+
+
+
+# 
+
+# 
+
 # Backend Part
 
 ## 1. The Command Line
