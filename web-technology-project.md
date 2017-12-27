@@ -518,6 +518,10 @@ function name(argument1, argument2) {
 var name = function(argument1, argument2) {
     return result;
 }
+// Anonymous Function
+function(argument1, argument2) {
+    return result;
+}
 ```
 
 **Scope: **context that code is executed in. When we define a function, we had a new scope for that function. Child scope have access to variables in parent scope, but parent scope don't have access to child scope.
@@ -537,12 +541,18 @@ function doOther() {
     return 2 * y + 10; 
 }
 doOther(); // return 24
-y; // throw error message 
+y; // throw error message
 ```
 
-# 
+**Higher Order Function: **functions that are either pass a function as an argument or return a function
 
-# 
+**Array: **group data in consecutive memory, we can retrieve, update, or add them by index.
+
+```js
+var friends = ["Charlie", "Liz", "David", "Mattias"];
+```
+
+
 
 # Backend Part
 
