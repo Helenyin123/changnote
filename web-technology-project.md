@@ -1,9 +1,6 @@
-
----
-
 # Frontend Part
 
-## 1. HTML - Hyper Text Markup Language
+# 1. HTML - Hyper Text Markup Language
 
 **Boilerplate**
 
@@ -546,13 +543,15 @@ y; // throw error message
 
 **Higher Order Function: **functions that are either pass a function as an argument or return a function
 
-**Array: **group data in consecutive memory, we can retrieve, update, or add them by index.
+**Array: **group data in consecutive memory, we can retrieve, update, or add them by index. For empty space, the default value is undefined. Array can hold any type of data.
 
 ```js
-var friends = ["Charlie", "Liz", "David", "Mattias"];
+// Define an array
+var array = [];
+var array = new Array();
+var friends = ["Charlie", false, null, 70];
+friend.length; // return 4
 ```
-
-
 
 # Backend Part
 
