@@ -452,7 +452,7 @@ name = "Sally"
 name = "80" - 10 = "70"
 ```
 
-**Cast Type:** If we want to convert a string to number, we can use Number\("80"\) to cast the type, or String\(90\)
+**Cast Type:** If we want to convert a string to number, we can use Number\("80"\) to cast the type, or String\(90\), Boolean\("Helllo"\)
 
 **Null: **explicitly nothing or empty
 
@@ -497,9 +497,17 @@ Link HTML and JavaScript file: use &lt;script src="url"&gt;&lt;/script&gt; tag, 
 </head>
 ```
 
-# 
+#### Functions
 
-# 
+functions are building blocks of JavaScript. It lets us wrap up code segment into reusable package. 
+
+**Declaration**
+
+```js
+function name(argument1, argument2) {
+    return result;
+} 
+```
 
 # Backend Part
 
