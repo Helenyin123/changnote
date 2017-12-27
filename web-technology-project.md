@@ -500,7 +500,14 @@ Link HTML and JavaScript file: use &lt;script src="url"&gt;&lt;/script&gt; tag, 
 
 #### Functions
 
-functions are building blocks of JavaScript. It lets us wrap up code segment into reusable package.
+functions are building blocks of JavaScript. It lets us wrap up code segment into reusable package. 
+
+```js
+function playMusic() {
+}
+// playMusic means pass a function, but not execute it
+// playMusic() means execute the function immediately
+```
 
 **Declaration & Expression**
 
@@ -543,7 +550,7 @@ y; // throw error message
 
 **Higher Order Function: **functions that are either pass a function as an argument or return a function
 
-**Array: **group data in consecutive memory, we can retrieve, update, or add them by index. For empty space, the default value is undefined. Array can hold any type of data.
+**Array: **group data in consecutive memory, we can retrieve, update, or add them by index. For empty space, the default value is undefined. If you access an index that is out of bound, it will return undefined. Array can hold any type of data.
 
 ```js
 // Define an array
@@ -551,6 +558,25 @@ var array = [];
 var array = new Array();
 var friends = ["Charlie", false, null, 70];
 friend.length; // return 4
+```
+
+**push/pop: **append or remove element to the end of the array
+
+**unshift/shift**: add or remove element to the start of the array
+
+**indexOf\(element\):** return the first index of that element in the array, if not exist, return -1.
+
+**slice\(start index, end index\):** deep copy a part of the array, the original array won't be changed
+
+**splice\(start index, number of element to be remove\): **remove element from array given index and range 
+
+**forEach\(function\): **iterate over the array. The syntax is like array.forEach\(function\(element, index\)\);
+
+```js
+var colors = ["Green", "Red", "Yellow", "Blue"];
+colors.forEach(function(color, i){ // input is an anonymous function
+    console.log(i + "th color is " + color); // color is a placeholder for element value, i is the index 
+});
 ```
 
 # Backend Part
