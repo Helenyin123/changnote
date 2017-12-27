@@ -520,6 +520,30 @@ var name = function(argument1, argument2) {
 }
 ```
 
+**Scope: **context that code is executed in. When we define a function, we had a new scope for that function. Child scope have access to variables in parent scope, but parent scope don't have access to child scope.
+
+```js
+var a = 4; var b = 9;
+function doMath() {
+    a = 5; 
+    var b = 12;
+    return a * a;
+}
+doMath(); // return 25
+x; // return 5
+y;// return 9
+function doOther() {
+    var y = 7;
+    return 2 * y + 10; 
+}
+doOther(); // return 24
+y; // throw error message 
+```
+
+# 
+
+# 
+
 # Backend Part
 
 ## 1. The Command Line
