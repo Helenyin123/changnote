@@ -480,12 +480,16 @@ color
 
 **clear\(\): **clear the javascript console
 
+**typeof\(varName\):** return the type of this variable in string form
+
 ```js
 alert("You can't open this page");
 alert(900 * 40);
 console.log("This can only show in console");
 var username = prompt("what is your username?");
 clear();
+typeof(70); //"number"
+typeof("false"); // "string"
 ```
 
 Link HTML and JavaScript file: use &lt;script src="url"&gt;&lt;/script&gt; tag, in sublime do script + tab
@@ -499,14 +503,14 @@ Link HTML and JavaScript file: use &lt;script src="url"&gt;&lt;/script&gt; tag, 
 
 #### Functions
 
-functions are building blocks of JavaScript. It lets us wrap up code segment into reusable package. 
+functions are building blocks of JavaScript. It lets us wrap up code segment into reusable package.
 
 **Declaration**
 
 ```js
 function name(argument1, argument2) {
     return result;
-} 
+}
 ```
 
 # Backend Part
