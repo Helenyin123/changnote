@@ -505,10 +505,17 @@ Link HTML and JavaScript file: use &lt;script src="url"&gt;&lt;/script&gt; tag, 
 
 functions are building blocks of JavaScript. It lets us wrap up code segment into reusable package.
 
-**Declaration**
+**Declaration & Expression**
+
+The difference between declaration and expression is that if we use expression, once we reassign the variable name to another type, the function will be lost.
 
 ```js
+// function declaration
 function name(argument1, argument2) {
+    return result;
+}
+// function expression, once assign the var name to another type, the function will be lost.
+var name = function(argument1, argument2) {
     return result;
 }
 ```
