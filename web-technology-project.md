@@ -636,11 +636,11 @@ movie.printComments();
 
 ## 4. DOM - Document Object Model
 
-The DOM is the interface between Javascript and HTML + CSS. It all starts with the root node - document object. The process is that we first select an element, then manipulate it.
+The DOM is the interface between Javascript and HTML + CSS. It all starts with the root node - document object. The process is that we first select an element, then manipulate it. 
 
 #### DOM Selector
 
-The document object have many method to select element.
+The document object have many method to select element. The selector will return a javascript object.
 
 **document.getElementById\(\) : **take a string argument as ID and return the one element with a matching ID.
 
@@ -654,7 +654,7 @@ The document object have many method to select element.
 
 #### Manipulation
 
-**Style Property**: it's one way to manipulate an element. The style property allows for quick styling, eg testing. It's recommended for styles to be defined in a separate file. There is a concept of "separation of concerns", which includes three parts: structure\(HTML\), presentation\(CSS\), behavior\(Javascript\) to be separated. 
+**Style Property**: it's one way to manipulate an element. The style property allows for quick styling, eg testing. It's recommended for styles to be defined in a separate file. There is a concept of "separation of concerns", which includes three parts: structure\(HTML\), presentation\(CSS\), behavior\(Javascript\) to be separated.
 
 classList is a read only list that contains the classes for a given element. It's not an array.We use add, remove, toggle to update it.
 
@@ -681,6 +681,30 @@ h1.classList.toggle("highlight");
 h1.style.color = "red";
 h1.style.border = "1px solid orange";
 ```
+
+**Text and Content: **there are two methods to change text and content
+
+**element.textContent\(\): **return a string of pure text without html tags in that element.
+
+**element.innerHTML\(\):** return a string of html in that element.
+
+```js
+var h1 = document.querySelector("h1");
+h1.textContent = "You are the best";
+h1.innerHTML = "<em>You<em> are the <strong>best</strong>";
+```
+
+**Attributes: **
+
+**element.getAttribute\("attribute"\): **
+
+**element.setAttribute\("attribute", "content"\):**
+
+
+
+
+
+# 
 
 # Backend Part
 
