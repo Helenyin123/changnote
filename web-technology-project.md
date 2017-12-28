@@ -644,17 +644,43 @@ The document object have many method to select element.
 
 **document.getElementById\(\) : **take a string argument as ID and return the one element with a matching ID.
 
-**document.getElementsByClassName\(\): **take a string argument as class name and return a node list of elements with a matching class. The node list is not an array, can't use forEach function to iterate. 
+**document.getElementsByClassName\(\): **take a string argument as class name and return a node list of elements with a matching class. The node list is not an array, can't use forEach function to iterate.
 
 **document.getElementsByTagName\(\): **take a string argument as tag name, and return a node list of elements with a matching tag.
 
-**document.querySelector\(\):** take a string argument as CSS-style selector, and return the first element that matches the selector. eg. "\#ID", ".class", ''tag", "li a" 
+**document.querySelector\(\):** take a string argument as CSS-style selector, and return the first element that matches the selector. eg. "\#ID", ".class", ''tag", "li a"
 
 **document.querySelectorAll\(\): **take a string argument as CSS-style selector, and return a list of all elements that matches the selector
 
-
-
 #### Manipulation
+
+**Style Property**: it's one way to manipulate an element. The style property allows for quick styling, eg testing. It's recommended for styles to be defined in a separate file. There is a concept of "separation of concerns", which includes three parts: structure\(HTML\), presentation\(CSS\), behavior\(Javascript\) to be separated. 
+
+classList is a read only list that contains the classes for a given element. It's not an array.We use add, remove, toggle to update it.
+
+```js
+// create a new CSS class
+.highlight {
+    color: red;
+    border: 1px solid orange;
+}
+
+// select an element
+var h1 = document.querySelector("h1");
+
+// manipulate method 1
+// add a class to that element classList
+h1.classList.add("highlight");
+// remove a class to that element classList
+h1.classList.remove("highlight");
+// if the class exist in classList, toggle will remove it from classList. 
+// If it doesn't exist, toggle will add it to classList.
+h1.classList.toggle("highlight");
+
+// manipulate method 2
+h1.style.color = "red";
+h1.style.border = "1px solid orange";
+```
 
 # Backend Part
 
