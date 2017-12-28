@@ -65,7 +65,7 @@ name is the name of the attributes, content is the content of the attributes
 
 &lt;img src=""&gt;  Insert an image
 
-#### Table
+#### HTML Table
 
 &lt;table border="1"&gt; &lt;/table&gt; define a table
 
@@ -333,7 +333,7 @@ text align specifies how the text is aligned. The value are right, center, left
 
 text decoration gives underline or line through or overline effect
 
-**The Box Model**
+#### **The Box Model**
 
 In a document, each element is represented as a rectangular box. In CSS, each of this rectangular boxes is described using box model. Each box has four edges: the margin edge, border edge, padding edge and content edge.
 
@@ -710,7 +710,7 @@ link.setAttribute("href", "www.dogs.com");
 
 #### DOM Events
 
-Events are everywhere, like click the mouse, press the keyboard, hover over a link, drag and drop. The process is 
+Events are everywhere, like click the mouse, press the keyboard, hover over a link, drag and drop. The process is
 
 # 
 
