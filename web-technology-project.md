@@ -500,12 +500,12 @@ Link HTML and JavaScript file: use &lt;script src="url"&gt;&lt;/script&gt; tag, 
 
 #### Functions
 
-functions are building blocks of JavaScript. It lets us wrap up code segment into reusable package. 
+functions are building blocks of JavaScript. It lets us wrap up code segment into reusable package.
 
 ```js
 function playMusic() {
 }
-// playMusic means pass a function, but not execute it
+// playMusic means pass a function as a reference, but not execute it
 // playMusic() means execute the function immediately
 ```
 
@@ -568,9 +568,9 @@ friend.length; // return 4
 
 **slice\(start index, end index\):** deep copy a part of the array, the original array won't be changed
 
-**splice\(start index, number of element to be remove\): **remove element from array given index and range 
+**splice\(start index, number of element to be remove\): **remove element from array given index and range
 
-**forEach\(function\): **iterate over the array. The syntax is like array.forEach\(function\(element, index\)\);
+**forEach\(function\): **iterate over the array. forEach\(\) takes in a callback function, it execute for each element in array. It has three argument: the element value, element index, the array being traversed. The syntax is like array.forEach\(function\(element, index, array\)\);
 
 ```js
 var colors = ["Green", "Red", "Yellow", "Blue"];
@@ -578,6 +578,65 @@ colors.forEach(function(color, i){ // input is an anonymous function
     console.log(i + "th color is " + color); // color is a placeholder for element value, i is the index 
 });
 ```
+
+#### Object
+
+Object store data in key-value pairs. Object can hold all sorts of data, eg. number, string, boolean, array, or object.
+
+```js
+// create a new object
+var person = {}
+var person = new Object();
+var person = {name: "Travis", age: 21, city: "LA" }
+
+// add element
+person.age = 6;
+
+
+// retrieve data using bracket or dot notation
+person["name"];
+person.name; 
+
+// you can't use dot notation if the property name start with number or name with space
+person.1house //Invalid
+person.house wife //Invalid
+person["1house"] // valid
+person["house wife"] // valid
+
+// you can't use dot notation for a variable
+var str = "age";
+person.str // Invalid, won't look for "age"
+person[str] // valid, will look for "age"
+```
+
+**Methods: **we can add methods to object, it's like a a property of an object that is a function. We can customize the same method for different object. Same as polymorphism in java.
+
+```js
+var person = {name = "chunk" add: function(x, y) {return x + y;}};
+person.add(30, 7); // return 37
+
+// customize method for different object, avoid namespace collision
+var cats = {speak: function(){return "MEOW!"}};
+var dogs = {speak: function(){return "WOOF!"}};
+cats.speak();
+dogs.speak();
+```
+
+**"This" Keyword:** In an object, if we want to add a method and use the data of the object, we use "this" to represent this object.
+
+```js
+var movie = {title: "Titanic", comments: ["So Great", "Don't like it", "Excellent"]};
+movie.printComments = function() {
+	for (var i = 0; i < this.comments.length; i++) {
+		console.log(this.comments[i]);
+	}
+}
+movie.printComments();
+```
+
+# 
+
+# 
 
 # Backend Part
 
