@@ -708,6 +708,16 @@ link.getAttribute("href"); // "www.google.com"
 link.setAttribute("href", "www.dogs.com");
 ```
 
+#### DOM Events
+
+Events are everywhere, like click the mouse, press the keyboard, hover over a link, drag and drop. The process is 
+
+# 
+
+# 
+
+# 
+
 # Backend Part
 
 ## 1. The Command Line
