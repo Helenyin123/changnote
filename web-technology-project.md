@@ -627,16 +627,34 @@ dogs.speak();
 ```js
 var movie = {title: "Titanic", comments: ["So Great", "Don't like it", "Excellent"]};
 movie.printComments = function() {
-	for (var i = 0; i < this.comments.length; i++) {
-		console.log(this.comments[i]);
-	}
+    for (var i = 0; i < this.comments.length; i++) {
+        console.log(this.comments[i]);
+    }
 }
 movie.printComments();
 ```
 
-# 
+## 4. DOM - Document Object Model
 
-# 
+The DOM is the interface between Javascript and HTML + CSS. It all starts with the root node - document object. The process is that we first select an element, then manipulate it.
+
+#### DOM Selector
+
+The document object have many method to select element.
+
+**document.getElementById\(\) : **take a string argument as ID and return the one element with a matching ID.
+
+**document.getElementsByClassName\(\): **take a string argument as class name and return a node list of elements with a matching class. The node list is not an array, can't use forEach function to iterate. 
+
+**document.getElementsByTagName\(\): **take a string argument as tag name, and return a node list of elements with a matching tag.
+
+**document.querySelector\(\):** take a string argument as CSS-style selector, and return the first element that matches the selector. eg. "\#ID", ".class", ''tag", "li a" 
+
+**document.querySelectorAll\(\): **take a string argument as CSS-style selector, and return a list of all elements that matches the selector
+
+
+
+#### Manipulation
 
 # Backend Part
 
