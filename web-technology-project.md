@@ -636,7 +636,7 @@ movie.printComments();
 
 ## 4. DOM - Document Object Model
 
-The DOM is the interface between Javascript and HTML + CSS. It all starts with the root node - document object. The process is that we first select an element, then manipulate it. 
+The DOM is the interface between Javascript and HTML + CSS. It all starts with the root node - document object. The process is that we first select an element, then manipulate it.
 
 #### DOM Selector
 
@@ -684,27 +684,29 @@ h1.style.border = "1px solid orange";
 
 **Text and Content: **there are two methods to change text and content
 
-**element.textContent\(\): **return a string of pure text without html tags in that element.
+**element.textContent: **return an extract** **pure text without html tags inside that element as string.
 
-**element.innerHTML\(\):** return a string of html in that element.
+**element.innerHTML:** return the html inside that element as string.
 
 ```js
 var h1 = document.querySelector("h1");
+// notice there is no ()
 h1.textContent = "You are the best";
 h1.innerHTML = "<em>You<em> are the <strong>best</strong>";
 ```
 
-**Attributes: **
+**Attributes:** there are two methods to read and write attributes.
 
-**element.getAttribute\("attribute"\): **
+**element.getAttribute\("attribute"\): **get the value of given attribute in the element.
 
-**element.setAttribute\("attribute", "content"\):**
+**element.setAttribute\("attribute", "content"\): **set the value of given attribute in the element.
 
-
-
-
-
-# 
+```js
+//<a href="www.google.com">Link</a>
+var link = document.querySelector("a");
+link.getAttribute("href"); // "www.google.com"
+link.setAttribute("href", "www.dogs.com");
+```
 
 # Backend Part
 
