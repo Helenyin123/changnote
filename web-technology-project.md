@@ -710,7 +710,14 @@ link.setAttribute("href", "www.dogs.com");
 
 #### DOM Events
 
-Events are everywhere, like click the mouse, press the keyboard, hover over a link, drag and drop. The process is
+Events are everywhere, like click the mouse, press the keyboard, hover over a link, drag and drop. The process is that first select an element, then add an event listener. An element can have several event listeners.
+
+**element.addEventListener\(type, function\): **Given the type of event we want to listen and function to execute when the event happen, we add an event listener to that element.
+
+```js
+var button = document.querySelector("button");
+button.addEventListener("click", function(){console.log("Button has been clicked!")});
+```
 
 # 
 
