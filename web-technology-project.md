@@ -721,13 +721,19 @@ button.addEventListener("click", function(){console.log("Button has been clicked
 
 [**Event Types**](https://developer.mozilla.org/en-US/docs/Web/Events)**: **
 
-**"click": **
+**"click": **fires when an element is clicked by user.** **
 
-**"change":**
+**"change": **when a change to the element value is committed by the user. eg. &lt;input&gt; &lt;select&gt; &lt;textarea&gt;. The difference between "change" and "input" event is change event is not necessarily fired for each change to an element's value.
 
-# 
+**"input": **when a change to the element value is changed. eg. &lt;input&gt;&lt;select&gt;&lt;textarea&gt;. This event fires more often.
 
-# 
+**"mouseover": **fires when the mouse hover over this element.
+
+**"mouseout": **fires when the mouse hover out this element
+
+
+
+
 
 # Backend Part
 
