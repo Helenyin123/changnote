@@ -719,7 +719,11 @@ var button = document.querySelector("button");
 button.addEventListener("click", function(){console.log("Button has been clicked!")});
 ```
 
-# 
+[**Event Types**](https://developer.mozilla.org/en-US/docs/Web/Events)**: **
+
+**"click": **
+
+**"change":**
 
 # 
 
