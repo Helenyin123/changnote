@@ -714,9 +714,13 @@ Events are everywhere, like click the mouse, press the keyboard, hover over a li
 
 **element.addEventListener\(type, function\): **Given the type of event we want to listen and function to execute when the event happen, we add an event listener to that element.
 
+**element.removeEventListener\(type, function\): **remove the event listener of certain type and function from element.
+
 ```js
 var button = document.querySelector("button");
-button.addEventListener("click", function(){console.log("Button has been clicked!")});
+button.addEventListener("click", clicked);
+button.removeEventListener("click",clicked);
+function clicked(){console.log("Button has been clicked!")};
 ```
 
 [**Event Types**](https://developer.mozilla.org/en-US/docs/Web/Events)**: **
@@ -730,10 +734,6 @@ button.addEventListener("click", function(){console.log("Button has been clicked
 **"mouseover": **fires when the mouse hover over this element.
 
 **"mouseout": **fires when the mouse hover out this element
-
-
-
-
 
 # Backend Part
 
