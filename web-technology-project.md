@@ -757,9 +757,19 @@ To add jQuery to HTML and CSS, use a &lt;script&gt; tag to link CDN or local fil
 
 **jQuery Selector:**`$("CSS-style selector")` will return a list of all the elements that matches the css-style selector.  it's similar to document.querySelectorAll\(\).
 
+`$("selector:first")`: select the first element that matches the selector
+
+`$(selector).last()`: select the last element in the list
+
 **Manipulation: **Each method in jQuery can be either getter or setter, so be careful about the input.
 
 **Style Property: **`$("selector").css("property", "value")`.css\(\) method is jQuery's interface to styling. You can either add an object in CSS\(\) too. The style will effect on every element selected in the list, we don't need to write a for loop.
+
+**addClass\(\):**
+
+**removeClass\(\):**
+
+**toggleClass\(\):**
 
 ```js
 // get the value of width of img
@@ -786,7 +796,7 @@ $("li").text("You are the best");
 $("h1").html("<strong>Nobody</strong> can destroy <em>you<em>");
 ```
 
-**Attributes: **
+**Attribute and Value: **
 
 **attr\("attribute name", "new value"\): **get the value of an attribute for the first element in the list of matched elements, or set one or more attributes for every matched element. It's similar to `element.getAttribute()` and `element.setAttribute()`
 
@@ -796,18 +806,21 @@ var link = $("a").attr("href");
 
 // set the type of input to button
 $("input").attr("type", "button");
-$("li").attr({})
+$("input").attr({type: "text", placeholder:"your name"});
 ```
 
+**val\("new value"\): **get the value of the first element in the list of matched element, or set the value of every matched element. it's like a wrapper for value, text\(\) is a wrapper for text content. It's similar to `element.value`
 
+```js
+// get the value of text input
+$("input:text").val()
+$("select").val // get the value of a dropdown menu
 
-val\(\):
+// set the value of number input
+$("input:number").val("4")
+```
 
-addClass\(\):
-
-removeClass\(\):
-
-toggleClass\(\):
+ 
 
 # 
 
