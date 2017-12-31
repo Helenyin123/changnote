@@ -765,11 +765,11 @@ To add jQuery to HTML and CSS, use a &lt;script&gt; tag to link CDN or local fil
 
 **Style Property: **`$("selector").css("property", "value")`.css\(\) method is jQuery's interface to styling. You can either add an object in CSS\(\) too. The style will effect on every element selected in the list, we don't need to write a for loop.
 
-**addClass\(\):**
+**addClass\("class1 class2"\): **add the specific class or classes to the list of matched elements 
 
-**removeClass\(\):**
+**removeClass\("className"\): **remove the specific class or classes to the list of matched elements 
 
-**toggleClass\(\):**
+**toggleClass\("className"\): **add the class if not exist or remove the class if existed in the matched elements 
 
 ```js
 // get the value of width of img
@@ -819,8 +819,6 @@ $("select").val // get the value of a dropdown menu
 // set the value of number input
 $("input:number").val("4")
 ```
-
- 
 
 # 
 
