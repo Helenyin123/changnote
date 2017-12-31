@@ -837,7 +837,7 @@ $(input).keypress(function(event) {
     if (event.which === 13) {
         console.log("You hit enter");
     }
-}); 
+});
 ```
 
 **on\(type, function\): **let you specify the type of event to listen for, similar to addEventListener\(\).
@@ -850,7 +850,31 @@ $("button").on("click", function(){
 });
 ```
 
-**Some Events:** "mouseenter", "mouseleave", "dbclick"\(double click\), 
+**Some Events:** "mouseenter", "mouseleave", "dbclick"\(double click\),
+
+#### jQuery Effect
+
+**fadeOut\(duration, function\):** hide the matched elements by fading them to transparent. It can fade in the duration time period and also execute a function when the animation complete. 
+
+**fadeIn\(duration, function\): **we can first set some element's style as "display: none", then fade it in to the page.
+
+**fadeToggle\(duration, function\): **if the element is on display currently, fade it out. else if it's not on display, fade it in.
+
+```js
+// all div will fade out when button is clicked, the animation will last 1s
+// after the animation is completed, remove all div
+$(button).on("click", function() {
+    $("div").fadeOut(1000, function(){
+        ($this).remove() ;
+    });
+});
+```
+
+**slideDown\(\): **animated the height of an element, display the matched elements with a sliding down motion
+
+**slideUp\(\): **hide** **the matched elements with a sliding up motion.
+
+**slideToggle\(\): **if the element is on display, hide it, else if the element is not on display, show it. 
 
 
 
