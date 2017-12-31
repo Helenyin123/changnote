@@ -365,7 +365,7 @@ p {
 
 ## 3. Bootstrap
 
-Bootstrap is the most popular HTML, CSS and JS framework for designing website. You can download it and link to the file locally, or use CDN support, which is an online server for bootstrap, you just need to add a link to the html header.
+Bootstrap is the most popular HTML, CSS and JS framework for designing website. You can download it and link to the file locally, or use CDN\(Content Distributed Network\)support, which is an online server for bootstrap, you just need to add a link to the html header.
 
 **Button, Jumbotron, Navigation Bar**
 
@@ -386,6 +386,15 @@ Use grid to build layout by 12 column system.
 **Four Different Sizes: **Extra Small\(Phone\)         Small\(Tablet\)         Medium\(Desktop\)      Large\(Desktop\)
 
 ## 4. JavaScript
+
+Link HTML and JavaScript file: use &lt;script src="url"&gt;&lt;/script&gt; tag, in sublime do script + tab
+
+```html
+<head>    
+    <title>Demo</title>
+    <script src="app.js"></script>
+</head>
+```
 
 #### Primitive Type
 
@@ -487,15 +496,6 @@ var username = prompt("what is your username?");
 clear();
 typeof(70); //"number"
 typeof("false"); // "string"
-```
-
-Link HTML and JavaScript file: use &lt;script src="url"&gt;&lt;/script&gt; tag, in sublime do script + tab
-
-```html
-<head>    
-    <title>Demo</title>
-    <script src="app.js"></script>
-</head>
 ```
 
 #### Functions
@@ -734,6 +734,14 @@ function clicked(){console.log("Button has been clicked!")};
 **"mouseover": **fires when the mouse hover over this element.
 
 **"mouseout": **fires when the mouse hover out this element
+
+## 5. jQuery
+
+jQuery is a javascript library, or DOM manipulation library. It have many useful methods like: select elements, manipulate elements, create elements, add event listener, animate elements, add effects, make http requests\(AJAX\), etc. The reason why we use jQuery is: \(1\) Fixes "broken" DOM API \(2\) Brevity and Clarity \(3\) Cross browser support \(4\) AJAX.
+
+## 
+
+# 
 
 # Backend Part
 
