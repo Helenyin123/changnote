@@ -761,15 +761,15 @@ To add jQuery to HTML and CSS, use a &lt;script&gt; tag to link CDN or local fil
 
 `$(selector).last()`: select the last element in the list
 
-**Manipulation: **Each method in jQuery can be either getter or setter, so be careful about the input.
+**Manipulation: **A big difference is that we can manipulate using jQuery methods to a collection of elements without for loop. It automatically apply the method to all selected elements. And** **Each method in jQuery is a getter and a setter, so be careful about distinguish which function does it use.
 
 **Style Property: **`$("selector").css("property", "value")`.css\(\) method is jQuery's interface to styling. You can either add an object in CSS\(\) too. The style will effect on every element selected in the list, we don't need to write a for loop.
 
-**addClass\("class1 class2"\): **add the specific class or classes to the list of matched elements 
+**addClass\("class1 class2"\): **add the specific class or classes to the list of matched elements
 
-**removeClass\("className"\): **remove the specific class or classes to the list of matched elements 
+**removeClass\("className"\): **remove the specific class or classes to the list of matched elements
 
-**toggleClass\("className"\): **add the class if not exist or remove the class if existed in the matched elements 
+**toggleClass\("className"\): **add the class if not exist or remove the class if existed in the matched elements
 
 ```js
 // get the value of width of img
