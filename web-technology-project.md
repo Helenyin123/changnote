@@ -822,13 +822,43 @@ $("select").val // get the value of a dropdown menu
 $("input:number").val("4")
 ```
 
+**"This" keyword:** in jQuery, this is written as `$(this)`
+
 #### jQuery Event
 
+**click\(function\): **add a click listener to element.
+
+**keydown/keypress/keyup\(function\): **function will be triggered** **when the key is pressed down/between key down and key up/when the key is relieved, it's used to add a key listener to element. keyup\(\) and keydown\(\) provide a code indicating which key is pressed. While keypress indicates which character was entered, like a lowercase 'a' will be reported as 65 by keydown and keyup, but as 97 by keypress. an uppercase 'A' = keypress shift + 'a' will be reported as 65 by all events. Every key have its own keycode. we can search which key was pressed by event.which.
+
+```js
+// The console will show "You hit enter" every time you press enter key 
+// the first argument of keypress callback function is an event object 
+$(input).keypress(function(event) {
+    if (event.which === 13) {
+        console.log("You hit enter");
+    }
+}); 
+```
+
+**on\(type, function\): **let you specify the type of event to listen for, similar to addEventListener\(\).
+
+**Difference between click\(\) and on\("click"\):** click\(\) will only add listener for existing element, on\("click"\) will add listener for all potential future elements. Usually, we use on\("click"\) rather than click\(\) to make all potential elements to add listeners.
+
+```js
+$("button").on("click", function(){
+    console.log("button clicked!");
+});
+```
+
+**Some Events:** "mouseenter", "mouseleave", "dbclick"\(double click\), 
 
 
-#### Backend Part
 
-## 1. The Command Line
+
+
+# Backend Part
+
+# 1. The Command Line
 
 **cd**: change to another directory/path  
 **ls**: list all the files and directories in current directory  
