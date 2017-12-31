@@ -757,11 +757,13 @@ To add jQuery to HTML and CSS, use a &lt;script&gt; tag to link CDN or local fil
 
 **jQuery Selector:**`$("CSS-style selector")` will return a list of all the elements that matches the css-style selector.  it's similar to document.querySelectorAll\(\).
 
-`$("selector:first")`: select the first element that matches the selector
+`$("selector:first")` or `$(selector).first()`: select the first element that matches the selector
 
 `$(selector).last()`: select the last element in the list
 
-**Manipulation: **A big difference is that we can manipulate using jQuery methods to a collection of elements without for loop. It automatically apply the method to all selected elements. And** **Each method in jQuery is a getter and a setter, so be careful about distinguish which function does it use.
+#### **Manipulation: **
+
+A big difference is that we can manipulate using jQuery methods to a collection of elements without for loop. It automatically apply the method to all selected elements. Secondly, each method in jQuery is both a getter and a setter, so be careful about distinguish which function does it use.
 
 **Style Property: **`$("selector").css("property", "value")`.css\(\) method is jQuery's interface to styling. You can either add an object in CSS\(\) too. The style will effect on every element selected in the list, we don't need to write a for loop.
 
@@ -820,9 +822,11 @@ $("select").val // get the value of a dropdown menu
 $("input:number").val("4")
 ```
 
-# 
+#### jQuery Event
 
-# Backend Part
+
+
+#### Backend Part
 
 ## 1. The Command Line
 
