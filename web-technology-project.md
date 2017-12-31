@@ -757,11 +757,14 @@ To add jQuery to HTML and CSS, use a &lt;script&gt; tag to link CDN or local fil
 
 **jQuery Selector:**`$("CSS-style selector")` will return a list of all the elements that matches the css-style selector.  it's similar to document.querySelectorAll\(\).
 
-**Manipulation:**
+**Manipulation: **Each method in jQuery can be either getter or setter, so be careful about the input.
 
-** Style Property: **`$("selector").css("property", "value")`.css\(\) method is jQuery's interface to styling. You can either add an object in CSS\(\) too. The style will effect on every element selected in the list, we don't need to write a for loop.
+**Style Property: **`$("selector").css("property", "value")`.css\(\) method is jQuery's interface to styling. You can either add an object in CSS\(\) too. The style will effect on every element selected in the list, we don't need to write a for loop.
 
 ```js
+// get the value of width of img
+var width = $("img").css("width");
+
 // change all <a> 's background color to blue
 $("a").css("backgroundColor", "blue"); 
 // change all element in class "selected" to these styles
@@ -774,9 +777,29 @@ $(".selected").css({border: "1px solid blue", color: "purple"});
 
 **html\("new html"\): **get the html contents of the first element in the list of matched elements, or set the html contents of every matched element. It's similar to `element.innerHTML`
 
+```js
+// get the text content of body
+var body = $(body).text();
+
+// set the text of all list to "You are the best"
+$("li").text("You are the best");
+$("h1").html("<strong>Nobody</strong> can destroy <em>you<em>");
+```
+
 **Attributes: **
 
 **attr\("attribute name", "new value"\): **get the value of an attribute for the first element in the list of matched elements, or set one or more attributes for every matched element. It's similar to `element.getAttribute()` and `element.setAttribute()`
+
+```js
+// get the link address of the first <a> 
+var link = $("a").attr("href");
+
+// set the type of input to button
+$("input").attr("type", "button");
+$("li").attr({})
+```
+
+
 
 val\(\):
 
