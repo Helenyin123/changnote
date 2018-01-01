@@ -159,6 +159,10 @@ name is the name of the attributes, content is the content of the attributes
 <textarea name="comments" rows="10" cols="50"></textarea>
 ```
 
+**Canvas: **&lt;canvas&gt; element can be used to draw graphics via scripting in JavaScript, it can be used to draw graphs, create animations or video processing or rendering. In HTML, canvas just exist, it doesn't do anything. In JavaScript, we will shape it.
+
+`<canvas id="canvas"></canvas>`
+
 ## 2. CSS - Cascading Style Sheet
 
 **General Rule**
@@ -854,7 +858,7 @@ $("button").on("click", function(){
 
 #### jQuery Effect
 
-**fadeOut\(duration, function\):** hide the matched elements by fading them to transparent. It can fade in the duration time period and also execute a function when the animation complete. 
+**fadeOut\(duration, function\):** hide the matched elements by fading them to transparent. It can fade in the duration time period and also execute a function when the animation complete.
 
 **fadeIn\(duration, function\): **we can first set some element's style as "display: none", then fade it in to the page.
 
@@ -865,7 +869,7 @@ $("button").on("click", function(){
 // after the animation is completed, remove all div
 $(button).on("click", function() {
     $("div").fadeOut(1000, function(){
-        ($this).remove() ;
+        $(this).remove() ;
     });
 });
 ```
@@ -874,9 +878,15 @@ $(button).on("click", function() {
 
 **slideUp\(\): **hide** **the matched elements with a sliding up motion.
 
-**slideToggle\(\): **if the element is on display, hide it, else if the element is not on display, show it. 
+**slideToggle\(\): **if the element is on display, hide it, else if the element is not on display, show it.
 
+#### [Paper JavaScript](http://paperjs.org/tutorials/)
 
+It's an open source vector graphics scripting framework that runs on top of HTML canvas. It offers a clean document object model and a powerful functionality to create and work with vector graphics.
+
+#### [**Howler JavaScript**](https://github.com/goldfire/howler.js)
+
+#### 
 
 
 
