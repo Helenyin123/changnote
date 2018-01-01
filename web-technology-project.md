@@ -880,15 +880,17 @@ $(button).on("click", function() {
 
 **slideToggle\(\): **if the element is on display, hide it, else if the element is not on display, show it.
 
-#### [Paper JavaScript](http://paperjs.org/tutorials/)
+[**Paper JavaScript**](http://paperjs.org/tutorials/)
 
 It's an open source vector graphics scripting framework that runs on top of HTML canvas. It offers a clean document object model and a powerful functionality to create and work with vector graphics.
 
-#### [**Howler JavaScript**](https://github.com/goldfire/howler.js)
+[**Howler JavaScript**](https://github.com/goldfire/howler.js)
 
-#### 
+It's an audio library for the modern web. It defaults to Web Audio API and falls back to HTML5 Audio. This makes working with audio in JavaScript easy and reliable across all platforms.
 
+**Notice**
 
+In oder to get rid of the Cross Origin errors in the console, you'll need to run a local HTTP server from your project's directory and load the circles.html file from there. The steps are: \(1\) Navigate to your project folder in the terminal \(2\) Run `python -m simpleHTTPServer`\(3\) open up your browser and navigate to http://localhost:8000 \(4\) select the html file
 
 # Backend Part
 
