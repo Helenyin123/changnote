@@ -890,11 +890,43 @@ It's an audio library for the modern web. It defaults to Web Audio API and falls
 
 **Notice**
 
-In oder to get rid of the Cross Origin errors in the console, you'll need to run a local HTTP server from your project's directory and load the circles.html file from there. The steps are: \(1\) Navigate to your project folder in the terminal \(2\) Run `python -m simpleHTTPServer`\(3\) open up your browser and navigate to http://localhost:8000 \(4\) select the html file
+In oder to get rid of the Cross Origin errors in the console, you'll need to run a local HTTP server from your project's directory and load the circles.html file from there. The steps are: \(1\) Navigate to your project folder in the terminal \(2\) Run `python -m simpleHTTPServer`\(3\) open up your browser and navigate to [http://localhost:8000](http://localhost:8000) \(4\) select the html file
 
 # Backend Part
 
-# 1. The Command Line
+## 1. Backend Basics
+
+**Process of entering an url to browser:** 
+
+\(1\) query ISP\(Internet service provider\) + DNS\(Domain Name Service\), get the IP address for the domain name  
+
+\(2\) send an HTTP request to the IP address
+
+\(3\) server get the request and builds up the right content by pulling data from database, then send a HTTP response to the user
+
+\(4\) browser receive the HTTP response and render the page 
+
+#### **Static vs. Dynamic Website**
+
+**Static Website: **runs the same html, css, javascript file every time. It will never be different.
+
+**Dynamic Website: **sites that are compiled on the server side where the server is constructing the webpage before it sends back response. The website is dynamic for different user and timestamp.
+
+#### Generic Web Technology Stack
+
+**Frontend: **HTML, CSS, Javascript
+
+**Backend: **Backend language\(Java, Python, NodeJS\), Framework\(Flask, Spring, Express\), Server\(Tomcat\), Database\(MySQL, MongoDB\)
+
+#### HTTP: Hyper Text Transfer Protocol
+
+**HTTP Request:** There are many HTTP request API, eg. Get, Post, Put, Delete. We can make a HTTP Get request by url, we need a html form to make a HTTP post request.
+
+**HTTP Response: **Response is consists of body and header.** **Body includes main content \(all html, css and javascript files\). Headers contains the metadata about the response. One of header data is status code, a number that represent the status of whole response cycle.
+
+\(1\) Set up server \(2\) Set up database \(3\) Routes \(4\) Start the server
+
+## 2. The Command Line
 
 **cd**: change to another directory/path  
 **ls**: list all the files and directories in current directory  
@@ -903,7 +935,7 @@ In oder to get rid of the Cross Origin errors in the console, you'll need to run
 **rm**: remove a file  
 **rmdir/rm - rf**: remove a directory
 
-## 2. Node JavaScript
+## 3. Node JavaScript
 
 Originally, javascript is used only for browser, which means it can only be used in frontend side.  
 NodeJS enable us to write javascript on both frontend side and server side
