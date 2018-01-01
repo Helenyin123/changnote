@@ -757,7 +757,7 @@ jQuery is a javascript library, or DOM manipulation library. It have many useful
 
 The reason why we use jQuery is: \(1\) Fixes "broken" DOM API \(2\) Brevity and Clarity \(3\) Cross browser support \(4\) AJAX.
 
-To add jQuery to HTML and CSS, use a &lt;script&gt; tag to link CDN or local file to html header.
+To add jQuery to HTML and CSS, use a `<script>` tag to link CDN or local file to html header.
 
 **jQuery Selector:**`$("CSS-style selector")` will return a list of all the elements that matches the css-style selector.  it's similar to document.querySelectorAll\(\).
 
@@ -765,7 +765,7 @@ To add jQuery to HTML and CSS, use a &lt;script&gt; tag to link CDN or local fil
 
 `$(selector).last()`: select the last element in the list
 
-#### **Manipulation: **
+#### Manipulation: 
 
 A big difference is that we can manipulate using jQuery methods to a collection of elements without for loop. It automatically apply the method to all selected elements. Secondly, each method in jQuery is both a getter and a setter, so be careful about distinguish which function does it use.
 
@@ -946,11 +946,70 @@ Notice that some functions that is only for browser won't work in node.js, becau
 
 **REPL:** Read, Evaluate, Print, Loop
 
-#### npm - Node Package Manager 
+#### npm - Node Package Manager
 
-npm is the package manager for javascript. Package is same with libraries, it is code that someone else written that you can add to your own code, like Bootstrap, jQuery, Paper.js, Howler.js. But we can't use &lt;script&gt; tag to link them since we don't have html file. 
+npm is the package manager for javascript. Package is same with libraries, it is code that someone else written that you can add to your own code, like Bootstrap, jQuery, Paper.js, Howler.js. But we can't use `<script>` tag to link them since we don't have html file.
 
 To install a package, type command line `npm install packageName`
 
 To import a package, assign a variable `var name = require("packageName");` in your js file
+
+## 4. Server Side Framework
+
+**Library: **It's a collection of functions\(routines\) or classes. The reason behind is simply code reuse. The routines and classes normally define specific operations in a domain specific area.
+
+**Framework: **It's code written by other, it provides a standard way to build and deploy application. In framework, all the control flow is already there, and there are bunch of predefined white spots that we should fill out with our code. A framework is normally more complex. It defines a skeleton where the application defines its own features to fill out the skeleton. In this way, your code will be called by the framework when appropriately. The benefit is that developers do not need to worry about if a design is good or not, but just about implementing domain specific functions.
+
+**Key Difference between Framework and Library: "**Inversion of control": When you call a method from a library, you are in control. But with a framework, the control is inverted, the framework calls you.  
+
+![](https://i.stack.imgur.com/DqCkT.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
