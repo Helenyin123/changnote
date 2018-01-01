@@ -896,15 +896,15 @@ In oder to get rid of the Cross Origin errors in the console, you'll need to run
 
 ## 1. Backend Basics
 
-**Process of entering an url to browser:** 
+**Process of entering an url to browser:**
 
-\(1\) query ISP\(Internet service provider\) + DNS\(Domain Name Service\), get the IP address for the domain name  
+\(1\) query ISP\(Internet service provider\) + DNS\(Domain Name Service\), get the IP address for the domain name
 
 \(2\) send an HTTP request to the IP address
 
 \(3\) server get the request and builds up the right content by pulling data from database, then send a HTTP response to the user
 
-\(4\) browser receive the HTTP response and render the page 
+\(4\) browser receive the HTTP response and render the page
 
 #### **Static vs. Dynamic Website**
 
@@ -918,13 +918,13 @@ In oder to get rid of the Cross Origin errors in the console, you'll need to run
 
 **Backend: **Backend language\(Java, Python, NodeJS\), Framework\(Flask, Spring, Express\), Server\(Tomcat\), Database\(MySQL, MongoDB\)
 
-#### HTTP: Hyper Text Transfer Protocol
+#### HTTP - Hyper Text Transfer Protocol
 
 **HTTP Request:** There are many HTTP request API, eg. Get, Post, Put, Delete. We can make a HTTP Get request by url, we need a html form to make a HTTP post request.
 
 **HTTP Response: **Response is consists of body and header.** **Body includes main content \(all html, css and javascript files\). Headers contains the metadata about the response. One of header data is status code, a number that represent the status of whole response cycle.
 
-\(1\) Set up server \(2\) Set up database \(3\) Routes \(4\) Start the server
+**Server Code Structure:** \(1\) Set up server \(2\) Set up database \(3\) Routes \(4\) Start the server
 
 ## 2. The Command Line
 
@@ -933,10 +933,24 @@ In oder to get rid of the Cross Origin errors in the console, you'll need to run
 **touch**: create a new file, it could be any form, for example .java .txt .xls  
 **mkdir**: create a new directory  
 **rm**: remove a file  
-**rmdir/rm - rf**: remove a directory
+**rmdir/rm - rf**: remove a directory. rm -rf can delete non-empty directory while rmdir can't.
 
 ## 3. Node JavaScript
 
 Originally, javascript is used only for browser, which means it can only be used in frontend side.  
 NodeJS enable us to write javascript on both frontend side and server side
+
+To enter node, open terminal and enter node. To quit node, enter control+c twice. To run a file with node, just type `node filename.js`to the terminal.
+
+Notice that some functions that is only for browser won't work in node.js, because node.js works in server side, there is no browser on server side. eg. alert\(\), document object model\(DOM\), selector, manipulation.
+
+**REPL:** Read, Evaluate, Print, Loop
+
+#### npm - Node Package Manager 
+
+npm is the package manager for javascript. Package is same with libraries, it is code that someone else written that you can add to your own code, like Bootstrap, jQuery, Paper.js, Howler.js. But we can't use &lt;script&gt; tag to link them since we don't have html file. 
+
+To install a package, type command line `npm install packageName`
+
+To import a package, assign a variable `var name = require("packageName");` in your js file
 
