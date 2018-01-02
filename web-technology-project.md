@@ -765,7 +765,7 @@ To add jQuery to HTML and CSS, use a `<script>` tag to link CDN or local file to
 
 `$(selector).last()`: select the last element in the list
 
-#### Manipulation: 
+#### Manipulation:
 
 A big difference is that we can manipulate using jQuery methods to a collection of elements without for loop. It automatically apply the method to all selected elements. Secondly, each method in jQuery is both a getter and a setter, so be careful about distinguish which function does it use.
 
@@ -958,58 +958,68 @@ To import a package, assign a variable `var name = require("packageName");` in y
 
 **Library: **It's a collection of functions\(routines\) or classes. The reason behind is simply code reuse. The routines and classes normally define specific operations in a domain specific area.
 
-**Framework: **It's code written by other, it provides a standard way to build and deploy application. In framework, all the control flow is already there, and there are bunch of predefined white spots that we should fill out with our code. A framework is normally more complex. It defines a skeleton where the application defines its own features to fill out the skeleton. In this way, your code will be called by the framework when appropriately. The benefit is that developers do not need to worry about if a design is good or not, but just about implementing domain specific functions.
+**Framework: **It's also external code that you include in you application, framework provides a standard way to build and deploy application. In framework, all the control flow is already there, and there are bunch of predefined white spots that we should fill out with our code. A framework is normally more complex. It defines a skeleton where the application defines its own features to fill out the skeleton. In this way, your code will be called by the framework when appropriately. The benefit is that developers do not need to worry about if a design is good or not, but just about implementing domain specific functions.
 
-**Key Difference between Framework and Library: "**Inversion of control": When you call a method from a library, you are in control. But with a framework, the control is inverted, the framework calls you.  
+**Key Difference between Framework and Library: "**Inversion of control": When you call a method from a library, you are in control. But with a framework, the control is inverted, the framework calls you. It's called the "Hollywood Principle": Don't call us, we call you.
 
 ![](https://i.stack.imgur.com/DqCkT.png)
 
+**Heavy weight vs. Light weight framework:** heavy weight framework write most of the code for you, you just need to fill in a few blanks, light weight framework have more blanks and let you fill in your code more often.
 
+#### [Express Framework](https://expressjs.com/)
 
+a minimal and flexible node.js web application framework that provide a robust set of features for web and mobile application.
 
+**Route:** server side code that are responsible for listening and receiving HTTP request and deciding what to send back as a response.
 
+```js
+// import and initialize express, save it to a variable
+var express = require("express"); // import express
+var app = express(); // execute express and initial it to a variable
 
+//Define routes  app.httpMethod("url(route path)", callback function(request, respond){})
+app.get("/bye", function(req, res) {
+    res.send("Goodbye");
+});
 
+// add a listener to the certain Port and Ip address request(start the server)
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("The server has start");
+});
+```
 
+**package.json**: all npm package contains "package.json", it holds metadata relevant to the project. It give the information to nmp that allows it to identify the project and handle project dependencies. project dependency is the package you need to install before you install this package. It's like a recipes for a meal.
 
+If we create a new package of our own, go to the package folder and type command line `npm init` , the terminal will walk you through to create a new package.json file for this package. And if you install any package using `npm install packageName --save`.The package.json file's package dependency will automatically add the package name and version you installed. so that you don't need to update package.json by yourself.
 
+**"\*" Router Matcher**: it will catch all route path that doesn't exist,  and execute the same callback function, like "page not found", etc. The order of this route function matters, because if you put it before other routes function, then all the page will go to "\*". Because the first route that matches the url request will only be run. So normally, we put it in the end.
 
+```js
+app.get("*", function(req, res) {
+    res.send("Sorry, page not found... What are you doing with your life?");
+})
+```
 
+**Route Params:** we don't want to write a function for every different route, instead we want to find a pattern and execute the function to every url that matches that pattern. So we need route parameter to represent that pattern.
 
+```js
+// "/speak/:animal" will take all the str after "speak/" as a parameter called animal
+// we get the string value from req.params.animal. Then find the corresponding sound for that animal.
+app.get("/speak/:animal", function(req, res){
+    var animal = req.params.animal.toLowerCase();
+    var sounds = {
+        pig:"'Oink'", 
+        cow:"'Moo'", 
+        dog:"'Woof Woof!'"};
+    res.send("The " + animal + " says " + sounds[animal]);
+});
+```
 
+**res.render\("fileName", object\)**: a method used to send back content of a file, the file need to exist in a directory called "views", res will automatically looks for the file in that directory. To pass data to ejs template, we create an object, link all data send in request to its corresponding variable name in ejs template. so that the page will be loaded dynamically.
 
+#### [Embedded JavaScript \(ejs\)](http://ejs.co/)
 
+ it enable us to have dynamic templates, we can embed some javascript code inside html file, using`<%= %>`before using this template, install ejs in npm. `npm install ejs --save`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+EJ
 
