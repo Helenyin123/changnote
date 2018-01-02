@@ -1,6 +1,6 @@
 # Frontend Part
 
-# 1. HTML - Hyper Text Markup Language
+## 1. HTML - Hyper Text Markup Language
 
 **Boilerplate**
 
@@ -1019,7 +1019,35 @@ app.get("/speak/:animal", function(req, res){
 
 #### [Embedded JavaScript \(ejs\)](http://ejs.co/)
 
- it enable us to have dynamic templates, we can embed some javascript code inside html file, using`<%= %>`before using this template, install ejs in npm. `npm install ejs --save`
+EJS enable us to have dynamic templates, we can embed some javascript code inside html file, for every line of javascript use`<% %>`to tell the browser, it's a embedded javascript code.
 
-EJ
+Before using ejs template, install ejs in npm: `npm install ejs --save`
+
+`<%  %>`: it won't display the value returned, it just execute the logic like control flow, loop, if statement
+
+`<%= %>`: it will render the value that is returned by javascript to HTML
+
+`<%- %>`
+
+**EJS Control Flow: **you must have `<% %>`  in every line for javascript
+
+```js
+// ejs if statement
+<% if (name.toLowerCase() == "chang") { %>
+<p> Good Choice, Chang is the Best! </p>
+<% } else { %>
+<p>Bad choice, you should have choose Chang.</p>
+<% }%>
+
+// ejs for loop
+<% for (var i = 0; i < posts.length; i++) { %>
+    <li>
+        <%= posts[i].title%>  -  <strong><%=posts[i].author%></strong> 
+    </li>
+<% } %>
+```
+
+**Serving Custom Assets**
+
+
 
