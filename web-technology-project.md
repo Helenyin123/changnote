@@ -966,7 +966,9 @@ To import a package, assign a variable `var name = require("packageName");` in y
 
 **Heavy weight vs. Light weight framework:** heavy weight framework write most of the code for you, you just need to fill in a few blanks, light weight framework have more blanks and let you fill in your code more often.
 
-[**Express**](https://expressjs.com/)**: **a minimal and flexible node.js web application framework that provide a robust set of features for web and mobile application.
+#### [Express Framework](https://expressjs.com/)
+
+a minimal and flexible node.js web application framework that provide a robust set of features for web and mobile application.
 
 **Route:** server side code that are responsible for listening and receiving HTTP request and deciding what to send back as a response.
 
@@ -986,11 +988,11 @@ app.listen(process.env.PORT, process.env.IP, function(){
 });
 ```
 
-**package.json**: all npm package contains "package.json", it holds metadata relevant to the project. It give the information to nmp that allows it to identify the project and handle project dependencies. project dependency is the package you need to install before you install this package. It's like a recipes for a meal. 
+**package.json**: all npm package contains "package.json", it holds metadata relevant to the project. It give the information to nmp that allows it to identify the project and handle project dependencies. project dependency is the package you need to install before you install this package. It's like a recipes for a meal.
 
 If we create a new package of our own, go to the package folder and type command line `npm init` , the terminal will walk you through to create a new package.json file for this package. And if you install any package using `npm install packageName --save`.The package.json file's package dependency will automatically add the package name and version you installed. so that you don't need to update package.json by yourself.
 
-**"\*" Router Matcher**: it will catch all route path that doesn't exist,  and execute the same callback function, like "page not found", etc. The order of this route function matters, because if you put it before other routes function, then all the page will go to "\*". Because the first route that matches the url request will only be run. So normally, we put it in the end. 
+**"\*" Router Matcher**: it will catch all route path that doesn't exist,  and execute the same callback function, like "page not found", etc. The order of this route function matters, because if you put it before other routes function, then all the page will go to "\*". Because the first route that matches the url request will only be run. So normally, we put it in the end.
 
 ```js
 app.get("*", function(req, res) {
@@ -1013,29 +1015,11 @@ app.get("/speak/:animal", function(req, res){
 });
 ```
 
+**res.render\("fileName", object\)**: a method used to send back content of a file, the file need to exist in a directory called "views", res will automatically looks for the file in that directory. To pass data to ejs template, we create an object, link all data send in request to its corresponding variable name in ejs template. so that the page will be loaded dynamically.
 
+#### [Embedded JavaScript \(ejs\)](http://ejs.co/)
 
+ it enable us to have dynamic templates, we can embed some javascript code inside html file, using`<%= %>`before using this template, install ejs in npm. `npm install ejs --save`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+EJ
 
