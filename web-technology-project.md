@@ -1017,7 +1017,7 @@ app.get("/speak/:animal", function(req, res){
 
 **res.render\("fileName", object\)**: a method used to send back content of a file, the file need to exist in a directory called "views", res will automatically looks for the file in that directory. To pass data to ejs template, we create an object, link all data send in request to its corresponding variable name in ejs template. so that the page will be loaded dynamically.
 
-#### [Embedded JavaScript \(ejs\)](http://ejs.co/)
+[**Embedded JavaScript \(ejs\)**](http://ejs.co/)
 
 EJS enable us to have dynamic templates, we can embed some javascript code inside html file, for every line of javascript use`<% %>`to tell the browser, it's a embedded javascript code.
 
@@ -1049,7 +1049,7 @@ Before using ejs template, install ejs in npm: `npm install ejs --save`
 
 **Serving Custom Assets**
 
-The css and javascript file stores in a directory called "public", all webpage's ejs file stores in a directory called "views", the header and footer are stored in a directory under "views" called "partials". To add header and footer, use `<% include partials/finelName %>`.when add css link, don't forget to add "/" before file name, which shows find css file under root directory. 
+The css and javascript file stores in a directory called "public", all webpage's ejs file stores in a directory called "views", the header and footer are stored in a directory under "views" called "partials". To add header and footer, use `<% include partials/finelName %>`.when add css link, don't forget to add "/" before file name, which shows find css file under root directory.
 
 ```js
 var express = require("express");
@@ -1087,6 +1087,7 @@ In ejs file, we need to create a form and define the "action" and "method" prope
 var bodyParser = require("body-parser");
 var friends = ["Tony", "Justin", "Miranda", "Fan", "Bob"];
 
+// make app use body parser to make req.body a javascript object
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
@@ -1112,9 +1113,39 @@ app.get("/friends", function(req, res){
 </form>
 ```
 
+#### **API - Application Programming Interface**
 
+It's ways for you to write code that interact with other application services. Web API is api that you interact with through the web \(http request\).
 
+If we make HTTP request, we will get HTML back. It contains the structure of a page.
 
+If we call an API, it respond with data, not structure. They use simpler data formats like XML and JSON.
+
+**XML - Extended Markup Language**
+
+Its syntax is similar to HTML, but it doesn't describe structure, it represent data key-value pair. There is no functional tag.
+
+```markdown
+<person>
+    <name>Travis</name>
+    <age>21</age>
+    <city>Los Angeles</city>
+</person>
+```
+
+**JSON - JavaScript Object Notation**
+
+JSON likes exactly like JavaScript Object, but key is also a string. 
+
+```js
+{
+ "person" :{
+    "name": "Travis", 
+    "age": "21",
+    "city": "Los Angeles"        
+ } 
+}
+```
 
 
 
