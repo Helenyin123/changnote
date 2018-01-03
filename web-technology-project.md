@@ -1081,7 +1081,37 @@ app.get("/r/:name", function(req, res){
 <%include partials/footer%>   <!--Attach footer.ejs-->
 ```
 
-**Post Handle Request:**
+**Handle Get Request**
+
+for get request, if we want to get some value from the page, we need to use HTML form and set the action to this url, method as "GET". In the node, extract the data from req.query.
+
+```js
+// handle get resuest
+app.get("/result", function(req, res){
+    var web = "http://www.omdbapi.com/?s=";
+    var key = "&apikey=thewdb"
+    // for get request extracted from req.query!
+    var title = req.query.title;
+    var url = web + title + key;
+    request(url, function(error, response, body){
+        if (!error && response.statusCode == 200) {
+            var movies = JSON.parse(body)["Search"];
+            res.render("result", {title:title, movies:movies});
+        }
+    }); 
+});
+```
+
+```html
+<form action="/result" method="GET">
+<label>Please enter the movie title: <input type="text" name="title" placeholder="movie name"></label>
+<input type="submit">
+</form>
+```
+
+
+
+**Handle Post Request:**
 
 In ejs file, we need to create a form and define the "action" and "method" property, in javascript, we define a new post route, get the data from  req.body, and add it to the dataset, then redirect to original page.
 
@@ -1111,7 +1141,7 @@ app.get("/friends", function(req, res){
 
 ```html
 <!--Once hit submit, the form value will sent to this url by post http method-->
-<form action="/addfriend" method="post">
+<form action="/addfriend" method="POST">
     <label>Friend Name:<input type="text" placeholder="name" name="newfriend"></label>
     <button>I made a new friend!</button>
 </form>
@@ -1155,7 +1185,9 @@ JSON likes exactly like JavaScript Object, but key is also a string.
 
 ```js
 var request = require("request");
-request("https://query.yahooapis.com/v1/public/yql?q=select%20astronomy.sunset%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22maui%2C%20hi%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys", function(error, response, body){
+// request callback function have three arguments: error, response and body
+request("https://query.yahooapis.com/v1/public/yql?q=select%20astronomy.sunset%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22maui%2C%20hi%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys", 
+function(error, response, body){
     if (error) {
         console.log(error);
     } else if (response.statusCode == 200) {
