@@ -1049,5 +1049,86 @@ Before using ejs template, install ejs in npm: `npm install ejs --save`
 
 **Serving Custom Assets**
 
+The css and javascript file stores in a directory called "public", all webpage's ejs file stores in a directory called "views", the header and footer are stored in a directory under "views" called "partials". To add header and footer, use `<% include partials/finelName %>`.when add css link, don't forget to add "/" before file name, which shows find css file under root directory. 
+
+```js
+var express = require("express");
+var app = express();
+
+// add "public" directory to app, so it will automatically look for public
+app.use(express.static("public"));
+// set view engine so that we don't need to write "home.ejs" every time. 
+app.set("view engine", "ejs");
+
+app.get("/r/:name", function(req, res){
+    var name = req.params.name;
+    res.render("home", {nameVar: name}); // No need to write "home.ejs"
+});
+```
+
+```html
+<!--in here can't use "/partials/header" because partials is inside views directory-->
+<%include partials/header%>  <!--Attach header.ejs-->
+<!--can't use "/public/app.css", because express will find public itself-->
+<!--very important to have a slash before app.css, which means look for app.css in the root directory, not the same with views directory-->
+<link rel="stylesheet" href="/app.css"> 
+
+<h1>This is the home page for <%= nameVar %></h1>
+<p> Do you know 5 + 5 = ?  It's <%= 5 + 5 %></p>
+<img src="https://timeincsecure-a.akamaihd.net/rtmp_uds/416418724/201705/2262/416418724_5444908038001_5444174709001-vs.jpg?pubId=416418724&videoId=5444174709001">
+<%include partials/footer%>   <!--Attach footer.ejs-->
+```
+
+**Post Handle  Request:**
+
+In ejs file, we need to create a form and define the "action" and "method" property, in javascript, we define a new post route, get the data from  req.body, and add it to the dataset, then redirect to original page. we need to install "body-parser" package.
+
+```js
+var bodyParser = require("body-parser");
+var friends = ["Tony", "Justin", "Miranda", "Fan", "Bob"];
+
+app.use(bodyParser.urlencoded({extended: true}));
+app.set("view engine", "ejs");
+
+app.post("/addfriend", function(req, res){
+    // extract friend name from req.body
+    var newfriend = req.body.newfriend;
+    // add it to the list
+    friends.push(newfriend);
+    // redirect to "/friends" page
+    res.redirect("/friends"); 
+});
+
+app.get("/friends", function(req, res){
+    res.render("friends", {friends:friends});
+});
+```
+
+```html
+<!--Once hit submit, the form value will sent to this url by post http method-->
+<form action="/addfriend" method="post">
+    <label>Friend Name:<input type="text" placeholder="name" name="newfriend"></label>
+    <button>I made a new friend!</button>
+</form>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
