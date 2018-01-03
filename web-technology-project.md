@@ -1083,7 +1083,7 @@ app.get("/r/:name", function(req, res){
 
 **Post Handle Request:**
 
-In ejs file, we need to create a form and define the "action" and "method" property, in javascript, we define a new post route, get the data from  req.body, and add it to the dataset, then redirect to original page. 
+In ejs file, we need to create a form and define the "action" and "method" property, in javascript, we define a new post route, get the data from  req.body, and add it to the dataset, then redirect to original page.
 
 We need to install "body-parser" package. `npm install body-parser --save`
 
@@ -1167,34 +1167,4 @@ request("https://query.yahooapis.com/v1/public/yql?q=select%20astronomy.sunset%2
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 
