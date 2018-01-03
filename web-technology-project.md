@@ -970,6 +970,8 @@ To import a package, assign a variable `var name = require("packageName");` in y
 
 a minimal and flexible node.js web application framework that provide a robust set of features for web and mobile application.
 
+Install express framework by `npm install express --save`
+
 **Route:** server side code that are responsible for listening and receiving HTTP request and deciding what to send back as a response.
 
 ```js
@@ -1079,9 +1081,11 @@ app.get("/r/:name", function(req, res){
 <%include partials/footer%>   <!--Attach footer.ejs-->
 ```
 
-**Post Handle  Request:**
+**Post Handle Request:**
 
-In ejs file, we need to create a form and define the "action" and "method" property, in javascript, we define a new post route, get the data from  req.body, and add it to the dataset, then redirect to original page. we need to install "body-parser" package.
+In ejs file, we need to create a form and define the "action" and "method" property, in javascript, we define a new post route, get the data from  req.body, and add it to the dataset, then redirect to original page. 
+
+We need to install "body-parser" package. `npm install body-parser --save`
 
 ```js
 var bodyParser = require("body-parser");
@@ -1117,9 +1121,7 @@ app.get("/friends", function(req, res){
 
 It's ways for you to write code that interact with other application services. Web API is api that you interact with through the web \(http request\).
 
-If we make HTTP request, we will get HTML back. It contains the structure of a page.
-
-If we call an API, it respond with data, not structure. They use simpler data formats like XML and JSON.
+If we make HTTP request by website domain, we will get HTML back. It contains the structure of a page. If we make HTTP request by web API URL, it respond with data, in the format of XML or JSON.
 
 **XML - Extended Markup Language**
 
@@ -1135,7 +1137,7 @@ Its syntax is similar to HTML, but it doesn't describe structure, it represent d
 
 **JSON - JavaScript Object Notation**
 
-JSON likes exactly like JavaScript Object, but key is also a string. 
+JSON likes exactly like JavaScript Object, but key is also a string.
 
 ```js
 {
@@ -1145,6 +1147,23 @@ JSON likes exactly like JavaScript Object, but key is also a string.
     "city": "Los Angeles"        
  } 
 }
+```
+
+**Request Package: **in order to send http request in a code program, we need to install a package called request `npm install request --save`
+
+**JSON.parse\(string\): **the body we get from request argument is not JSON, it's a string. We need to transfer it to JSON using this method.
+
+```js
+var request = require("request");
+request("https://query.yahooapis.com/v1/public/yql?q=select%20astronomy.sunset%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22maui%2C%20hi%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys", function(error, response, body){
+    if (error) {
+        console.log(error);
+    } else if (response.statusCode == 200) {
+        var parsed = JSON.parse(body); // parse string the JSON
+        console.log("Today's sunset time in Hawaii is ");
+        console.log(parsed["query"]["results"]["channel"]["astronomy"]["sunset"]);
+    }
+});
 ```
 
 
@@ -1162,4 +1181,20 @@ JSON likes exactly like JavaScript Object, but key is also a string.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
