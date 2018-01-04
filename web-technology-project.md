@@ -387,31 +387,31 @@ Bootstrap is the most popular HTML, CSS and JS framework for designing website. 
 
 **Navigation Bar**
 
-Sample code for navigation bar, before use collapse button, add bootstrap javascript cdn and jQuery cdn link to the head. 
+Sample code for navigation bar, before use collapse button, add bootstrap javascript cdn and jQuery cdn link to the head.
 
 ```html
 <nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<div class="navbar-brand"><i class="fa fa-picture-o" aria-hidden="true"> IMGS</i></div>
-		</div>
-		<div class="collapse navbar-collapse" id="bs-navbar-collapse">
-			<ul class="nav navbar-nav">
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Sign Up</a></li>
-				<li><a href="#">Login</a></li>
-			</ul>
-		</div>
-	</div>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand"><i class="fa fa-picture-o" aria-hidden="true"> IMGS</i></div>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
 ```
 
