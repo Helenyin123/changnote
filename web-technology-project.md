@@ -688,15 +688,11 @@ The DOM is the interface between Javascript and HTML + CSS. It all starts with t
 
 The document object have many method to select element. The selector will return a javascript object.
 
-**document.getElementById\(\) : **take a string argument as ID and return the one element with a matching ID.
-
-**document.getElementsByClassName\(\): **take a string argument as class name and return a node list of elements with a matching class. The node list is not an array, can't use forEach function to iterate.
-
-**document.getElementsByTagName\(\): **take a string argument as tag name, and return a node list of elements with a matching tag.
-
-**document.querySelector\(\):** take a string argument as CSS-style selector, and return the first element that matches the selector. eg. "\#ID", ".class", ''tag", "li a"
-
-**document.querySelectorAll\(\): **take a string argument as CSS-style selector, and return a list of all elements that matches the selector
+* **document.getElementById\(\) : **take a string argument as ID and return the one element with a matching ID.
+* **document.getElementsByClassName\(\): **take a string argument as class name and return a node list of elements with a matching class. The node list is not an array, can't use forEach function to iterate.
+* **document.getElementsByTagName\(\): **take a string argument as tag name, and return a node list of elements with a matching tag.
+* **document.querySelector\(\):** take a string argument as CSS-style selector, and return the first element that matches the selector. eg. "\#ID", ".class", ''tag", "li a"
+* **document.querySelectorAll\(\): **take a string argument as CSS-style selector, and return a list of all elements that matches the selector
 
 #### Manipulation
 
@@ -730,9 +726,8 @@ h1.style.border = "1px solid orange";
 
 **Text and Content: **there are two methods to change text and content
 
-**element.textContent: **return an extract** **pure text without html tags inside that element as string.
-
-**element.innerHTML:** return the html inside that element as string.
+* **element.textContent: **return an extract** **pure text without html tags inside that element as string.
+* **element.innerHTML:** return the html inside that element as string.
 
 ```js
 var h1 = document.querySelector("h1");
@@ -743,9 +738,8 @@ h1.innerHTML = "<em>You<em> are the <strong>best</strong>";
 
 **Attributes:** there are two methods to read and write attributes.
 
-**element.getAttribute\("attribute"\): **get the value of given attribute in the element.
-
-**element.setAttribute\("attribute", "content"\): **set the value of given attribute in the element.
+* **element.getAttribute\("attribute"\): **get the value of given attribute in the element.
+* **element.setAttribute\("attribute", "content"\): **set the value of given attribute in the element.
 
 ```js
 //<a href="www.google.com">Link</a>
@@ -771,17 +765,12 @@ function clicked(){console.log("Button has been clicked!")};
 
 [**Event Types**](https://developer.mozilla.org/en-US/docs/Web/Events)**: **
 
-**"click": **fires when an element is clicked by user.** **
-
-**"change": **when a change to the element value is committed by the user. eg. &lt;input&gt; &lt;select&gt; &lt;textarea&gt;. The difference between "change" and "input" event is change event is not necessarily fired for each change to an element's value.
-
-**"input": **when a change to the element value is changed. eg. &lt;input&gt;&lt;select&gt;&lt;textarea&gt;. This event fires more often.
-
-**"mouseover": **fires when the mouse hover over this element.
-
-**"mouseout": **fires when the mouse hover out this element
-
-## 5. jQuery
+* **"click": **fires when an element is clicked by user.** **
+* **"change": **when a change to the element value is committed by the user. eg. &lt;input&gt; &lt;select&gt; &lt;textarea&gt;. The difference between "change" and "input" event is change event is not necessarily fired for each change to an element's value.
+* **"input": **when a change to the element value is changed. eg. &lt;input&gt;&lt;select&gt;&lt;textarea&gt;. This event fires more often.
+* **"mouseover": **fires when the mouse hover over this element.
+* **"mouseout": **fires when the mouse hover out this element
+* ## 5. jQuery
 
 jQuery is a javascript library, or DOM manipulation library. It have many useful methods like: select elements, manipulate elements, create elements, add event listener, animate elements, add effects, make http requests\(AJAX\), etc.
 
@@ -801,11 +790,9 @@ A big difference is that we can manipulate using jQuery methods to a collection 
 
 **Style Property: **`$("selector").css("property", "value")`.css\(\) method is jQuery's interface to styling. You can either add an object in CSS\(\) too. The style will effect on every element selected in the list, we don't need to write a for loop.
 
-**addClass\("class1 class2"\): **add the specific class or classes to the list of matched elements
-
-**removeClass\("className"\): **remove the specific class or classes to the list of matched elements
-
-**toggleClass\("className"\): **add the class if not exist or remove the class if existed in the matched elements
+* **addClass\("class1 class2"\): **add the specific class or classes to the list of matched elements
+* **removeClass\("className"\): **remove the specific class or classes to the list of matched elements
+* **toggleClass\("className"\): **add the class if not exist or remove the class if existed in the matched elements
 
 ```js
 // get the value of width of img
@@ -819,9 +806,8 @@ $(".selected").css({border: "1px solid blue", color: "purple"});
 
 **Text and Content:**
 
-**text\("new text"\):** get or set the combined text \(a single string\) content of each element in the list of matched elements, including their descendant. It's similar to `element.textContent`
-
-**html\("new html"\): **get the html contents of the first element in the list of matched elements, or set the html contents of every matched element. It's similar to `element.innerHTML`
+* **text\("new text"\):** get or set the combined text \(a single string\) content of each element in the list of matched elements, including their descendant. It's similar to `element.textContent`
+* **html\("new html"\): **get the html contents of the first element in the list of matched elements, or set the html contents of every matched element. It's similar to `element.innerHTML`
 
 ```js
 // get the text content of body
@@ -834,7 +820,7 @@ $("h1").html("<strong>Nobody</strong> can destroy <em>you<em>");
 
 **Attribute and Value: **
 
-**attr\("attribute name", "new value"\): **get the value of an attribute for the first element in the list of matched elements, or set one or more attributes for every matched element. It's similar to `element.getAttribute()` and `element.setAttribute()`
+* **attr\("attribute name", "new value"\): **get the value of an attribute for the first element in the list of matched elements, or set one or more attributes for every matched element. It's similar to `element.getAttribute()` and `element.setAttribute()`
 
 ```js
 // get the link address of the first <a> 
@@ -845,7 +831,7 @@ $("input").attr("type", "button");
 $("input").attr({type: "text", placeholder:"your name"});
 ```
 
-**val\("new value"\): **get the value of the first element in the list of matched element, or set the value of every matched element. it's like a wrapper for value, text\(\) is a wrapper for text content. It's similar to `element.value`
+* **val\("new value"\): **get the value of the first element in the list of matched element, or set the value of every matched element. it's like a wrapper for value, text\(\) is a wrapper for text content. It's similar to `element.value`
 
 ```js
 // get the value of text input
@@ -888,11 +874,9 @@ $("button").on("click", function(){
 
 #### jQuery Effect
 
-**fadeOut\(duration, function\):** hide the matched elements by fading them to transparent. It can fade in the duration time period and also execute a function when the animation complete.
-
-**fadeIn\(duration, function\): **we can first set some element's style as "display: none", then fade it in to the page.
-
-**fadeToggle\(duration, function\): **if the element is on display currently, fade it out. else if it's not on display, fade it in.
+* **fadeOut\(duration, function\):** hide the matched elements by fading them to transparent. It can fade in the duration time period and also execute a function when the animation complete.
+* **fadeIn\(duration, function\): **we can first set some element's style as "display: none", then fade it in to the page.
+* **fadeToggle\(duration, function\): **if the element is on display currently, fade it out. else if it's not on display, fade it in.
 
 ```js
 // all div will fade out when button is clicked, the animation will last 1s
@@ -904,11 +888,9 @@ $(button).on("click", function() {
 });
 ```
 
-**slideDown\(\): **animated the height of an element, display the matched elements with a sliding down motion
-
-**slideUp\(\): **hide** **the matched elements with a sliding up motion.
-
-**slideToggle\(\): **if the element is on display, hide it, else if the element is not on display, show it.
+* **slideDown\(\): **animated the height of an element, display the matched elements with a sliding down motion
+* **slideUp\(\): **hide** **the matched elements with a sliding up motion.
+* **slideToggle\(\): **if the element is on display, hide it, else if the element is not on display, show it.
 
 [**Paper JavaScript**](http://paperjs.org/tutorials/)
 
@@ -920,7 +902,12 @@ It's an audio library for the modern web. It defaults to Web Audio API and falls
 
 **Notice**
 
-In oder to get rid of the Cross Origin errors in the console, you'll need to run a local HTTP server from your project's directory and load the circles.html file from there. The steps are: \(1\) Navigate to your project folder in the terminal \(2\) Run `python -m simpleHTTPServer`\(3\) open up your browser and navigate to [http://localhost:8000](http://localhost:8000) \(4\) select the html file
+In oder to get rid of the Cross Origin errors in the console, you'll need to run a local HTTP server from your project's directory and load the circles.html file from there. The steps are: 
+
+1. Navigate to your project folder in the terminal 
+2. Run `python -m simpleHTTPServer`
+3. Open up your browser and navigate to [http://localhost:8000](http://localhost:8000)
+4. Select the html file
 
 # Backend Part
 
@@ -928,13 +915,10 @@ In oder to get rid of the Cross Origin errors in the console, you'll need to run
 
 **Process of entering an url to browser:**
 
-\(1\) query ISP\(Internet service provider\) + DNS\(Domain Name Service\), get the IP address for the domain name
-
-\(2\) send an HTTP request to the IP address
-
-\(3\) server get the request and builds up the right content by pulling data from database, then send a HTTP response to the user
-
-\(4\) browser receive the HTTP response and render the page
+1. query ISP\(Internet service provider\) + DNS\(Domain Name Service\), get the IP address for the domain name
+2. send an HTTP request to the IP address
+3. server get the request and builds up the right content by pulling data from database, then send a HTTP response to the user
+4. browser receive the HTTP response and render the page
 
 #### **Static vs. Dynamic Website**
 
@@ -1233,7 +1217,42 @@ database is a collection of information/data. It has an interface for CRUD\(crea
 **SQL\(Relation\) vs. NoSQL\(Not only SQL\) Database:**
 
 * SQL data schema is fixed. The relation between two entities is represented by  join table. Everything is tabula so it's difficult to add a new column afterwards. We need to define the exact pattern for an entity beforehand, and every entity follows that same pattern. 
-* NoSQL data schema is very flexible. It doesn't have tables.The data forma is like javascript object in key-value pairs called BSON\(Binary Javascript Object Notation\). A certain key can exist or not exist in an entity. Value can be an object or a list. Things can be nested. 
+* NoSQL data schema is very flexible. It doesn't have tables.The data format is like javascript object in key-value pairs called BSON\(Binary Javascript Object Notation\). A certain key can exist or not exist in an entity. Value can be an object or a list. Things can be nested. 
+
+#### MongoDB 
+
+mongoDB is a scalable, high-performance, open source  NoSQL database.
+
+**Mongo Commands:**
+
+* mongod: stand for Mongo Demon, it start the mongo process. it will keep running in the background.
+* mongo: open up the mongo shell which is like javascript console, used to debug and test.
+* help: give a list of basic features of mongo.
+* showdbs: show database name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
