@@ -902,7 +902,7 @@ It's an audio library for the modern web. It defaults to Web Audio API and falls
 
 **Notice**
 
-In oder to get rid of the Cross Origin errors in the console, you'll need to run a local HTTP server from your project's directory and load the circles.html file from there. The steps are: 
+In oder to get rid of the Cross Origin errors in the console, you'll need to run a local HTTP server from your project's directory and load the circles.html file from there. The steps are:
 
 1. Navigate to your project folder in the terminal 
 2. Run `python -m simpleHTTPServer`
@@ -1219,40 +1219,22 @@ database is a collection of information/data. It has an interface for CRUD\(crea
 * SQL data schema is fixed. The relation between two entities is represented by  join table. Everything is tabula so it's difficult to add a new column afterwards. We need to define the exact pattern for an entity beforehand, and every entity follows that same pattern. 
 * NoSQL data schema is very flexible. It doesn't have tables.The data format is like javascript object in key-value pairs called BSON\(Binary Javascript Object Notation\). A certain key can exist or not exist in an entity. Value can be an object or a list. Things can be nested. 
 
-#### MongoDB 
+#### MongoDB
 
 mongoDB is a scalable, high-performance, open source  NoSQL database.
 
 **Mongo Commands:**
 
-* mongod: stand for Mongo Demon, it start the mongo process. it will keep running in the background.
-* mongo: open up the mongo shell which is like javascript console, used to debug and test.
-* help: give a list of basic features of mongo.
-* showdbs: show database name
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* **mongod:** stand for Mongo Demon, it start the mongo process. it will keep running in the background.
+* **mongo:** open up the mongo shell which is like javascript console, used to debug and test.
+* **help:** give a list of basic features of mongo.
+* **showdbs: **show all databases name
+* **use database name: **if this database exist, we will use it. If it doesn't exist, we will create a new database called this name. 
+* **db.collection.insert\(object\): **insert an object to this collection, if the collection doesn't exist, create a new one.
+* **show collections: **show all exist collections in this database.
+* **db.collection.find\(object\):** find objects in the collection that have the same property value with input object.
+* **db.collection.update\(firstObject, {$set:secondObject}\):** find the object that have same property value with first input object and update its other property value according to the second input object. The rest property will remain unchanged.
+* **db.collection.remove\(object\): **remove every object that matches with input object. If we want to only remove a certain number, we can add `.limit(n)` at the end of the command.
 
 
 
