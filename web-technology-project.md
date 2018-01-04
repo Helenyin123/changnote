@@ -1230,8 +1230,8 @@ mongoDB is a scalable, high-performance, open source  NoSQL database.
 * **help:** give a list of basic features of mongo.
 * **showdbs: **show all databases name
 * **use database name: **if this database exist, we will use it. If it doesn't exist, we will create a new database called this name. 
-* **db.collection.insert\(object\): **insert an object to this collection, if the collection doesn't exist, create a new one.
 * **show collections: **show all exist collections in this database.
+* **db.collection.insert\(object\): **insert an object to this collection, if the collection doesn't exist, create a new one.
 * **db.collection.find\(object\):** find objects in the collection that have the same property value with input object.
 * **db.collection.update\(firstObject, {$set:secondObject}\):** find the object that have same property value with first input object and update its other property value according to the second input object. The rest property will remain unchanged.
 * **db.collection.remove\(object\): **remove every object that matches with input object. If we want to only remove a certain number, we can add `.limit(n)` at the end of the command.
