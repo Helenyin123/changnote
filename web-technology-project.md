@@ -1228,17 +1228,12 @@ function(error, response, body){
 
 ## 6. DataBase
 
+database is a collection of information/data. It has an interface for CRUD\(create, read, update, delete\) operations.
 
+**SQL\(Relation\) vs. NoSQL\(Not only SQL\) Database:**
 
-
-
-
-
-
-
-
-
-
+* SQL data schema is fixed. The relation between two entities is represented by  join table. Everything is tabula so it's difficult to add a new column afterwards. We need to define the exact pattern for an entity beforehand, and every entity follows that same pattern. 
+* NoSQL data schema is very flexible. Each entity are represented by javascript object with key-value pairs. It doesn't have tables. The data An entity can javascript object called BSON\(Binary Javascript Object Notation\). Value can be an object or a list. Things can be nested. 
 
 
 
