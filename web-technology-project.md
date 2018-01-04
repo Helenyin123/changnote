@@ -1175,7 +1175,7 @@ app.get("/friends", function(req, res){
 </form>
 ```
 
-#### **API - Application Programming Interface**
+## 5. **API - Application Programming Interface**
 
 It's ways for you to write code that interact with other application services. Web API is api that you interact with through the web \(http request\).
 
@@ -1225,6 +1225,28 @@ function(error, response, body){
     }
 });
 ```
+
+## 6. DataBase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
