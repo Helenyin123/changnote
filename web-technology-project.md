@@ -1235,6 +1235,18 @@ mongoDB is a scalable, high-performance, open source  NoSQL database.
 * **db.collection.find\(object\):** find objects in the collection that have the same property value with input object.
 * **db.collection.update\(firstObject, {$set:secondObject}\):** find the object that have same property value with first input object and update its other property value according to the second input object. The rest property will remain unchanged.
 * **db.collection.remove\(object\): **remove every object that matches with input object. If we want to only remove a certain number, we can add `.limit(n)` at the end of the command.
+* db.collection.drop\(\):
+
+**Restful Routes:**
+
+| Route Name | URL | HTTP Method | Description |
+| :---: | :---: | :---: | :---: |
+| INDEX | /dogs | GET | Display a list of dogs in DB |
+| NEW | /dogs/new | GET | Display forms to make a new dog  |
+| CREATE | /dogs | POST | Add new dog to DB |
+| SHOW | /dogs/:id | GET | shows info about one dog |
+
+
 
 
 
