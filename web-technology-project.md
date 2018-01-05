@@ -1237,9 +1237,56 @@ mongoDB is a scalable, high-performance, open source  NoSQL database.
 * **db.collection.remove\(object\): **remove every object that matches with input object. If we want to only remove a certain number, we can add `.limit(n)` at the end of the command.
 * **db.collection.drop\(\): **delete all data in that collection.
 
-#### RESTful Routes
+**Mongoose**
 
-REST\(Representational State Transfer\): a mapping between HTTP method and CRUD. 
+mongoose provide a schema-based solution to model application data. It's a mongoDB object data mapper\(ODM\) for node.js.
+
+```js
+// import mongoose
+var mongoose = require("mongoose");
+// connect mongoose with mongoDB database, if the database doesn't exist, create one
+mongoose.connect("mongodb://localhost/cat_app");
+// create a mongoose schema
+var catSchema = new mongoose.Schema({
+    name: String,
+    age: Number,
+    temperament: String
+});
+
+// Cat is the collection name and catSchema is the schema for this collection
+var Cat = mongoose.model("Cat", catSchema);
+
+// create a cat object and add to database
+// The callback function is the code that will execute after create operation is done
+// err is error message if this operation went wrong 
+// cat is the object returned from database, not the variable in express
+Cat.create({
+    name:"Snow White",
+    age: 15,
+    temperament: "Bland"
+}, function(err, cat){
+    if (err) {
+        console.log(err);
+    } else {
+       console.log(cat); 
+    }
+});
+
+// retriev a cat from the DB
+Cat.find({}, function(err, cats){
+    if (err) {
+        console.log("Oh no, error");
+        console.log(err);
+    } else {
+        console.log("All the cats:");
+        console.log(cats);
+    }
+});
+```
+
+## 7. RESTful Routes
+
+**REST\(Representational State Transfer\):** a mapping between HTTP method and CRUD.
 
 There are 7 RESTful routes, it's a pattern and a convention to structure your routes :
 
@@ -1252,16 +1299,6 @@ There are 7 RESTful routes, it's a pattern and a convention to structure your ro
 | Edit | /dogs/:id/edit | GET | show edit form for one dog |
 | Update | /dogs/:id | PUT | update a dog, then redirect to somewhere |
 | Destroy | /dogs/:id | DELETE | delete a dog, then redirect to somewhere |
-
-
-
-
-
-
-
-
-
-
 
 
 
