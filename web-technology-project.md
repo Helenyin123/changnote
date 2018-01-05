@@ -1237,14 +1237,21 @@ mongoDB is a scalable, high-performance, open source  NoSQL database.
 * **db.collection.remove\(object\): **remove every object that matches with input object. If we want to only remove a certain number, we can add `.limit(n)` at the end of the command.
 * **db.collection.drop\(\): **delete all data in that collection.
 
-**Restful Routes:**
+#### RESTful Routes
+
+REST\(Representational State Transfer\): 
+
+There are seven rest routes:
 
 | Route Name | URL | HTTP Method | Description |
 | :---: | :---: | :---: | :---: |
-| INDEX | /dogs | GET | Display a list of dogs in DB |
-| NEW | /dogs/new | GET | Display forms to make a new dog |
-| CREATE | /dogs | POST | Add new dog to DB |
-| SHOW | /dogs/:id | GET | shows info about one dog |
+| Index | /dogs | GET | list all dogs in DB |
+| New | /dogs/new | GET | show new dog form |
+| Create | /dogs | POST | create a new dog and redirect to somewhere  |
+| Show | /dogs/:id | GET | shows info about one dog |
+| Edit | /dogs/:id/edit | GET | show edit form for one dog |
+| Update | /dogs/:id | PUT | update a dog, then redirect to somewhere |
+| Destroy | /dogs/:id | DELETE | delete a dog, then redirect to somewhere |
 
 
 
