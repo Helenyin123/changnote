@@ -1239,19 +1239,29 @@ mongoDB is a scalable, high-performance, open source  NoSQL database.
 
 #### RESTful Routes
 
-REST\(Representational State Transfer\): 
+REST\(Representational State Transfer\): a mapping between HTTP method and CRUD. 
 
-There are seven rest routes:
+There are 7 RESTful routes, it's a pattern and a convention to structure your routes :
 
-| Route Name | URL | HTTP Method | Description |
+| Route Name | Path \(URL\) | HTTP Method | Description |
 | :---: | :---: | :---: | :---: |
 | Index | /dogs | GET | list all dogs in DB |
 | New | /dogs/new | GET | show new dog form |
-| Create | /dogs | POST | create a new dog and redirect to somewhere  |
+| Create | /dogs | POST | create a new dog and redirect to somewhere |
 | Show | /dogs/:id | GET | shows info about one dog |
 | Edit | /dogs/:id/edit | GET | show edit form for one dog |
 | Update | /dogs/:id | PUT | update a dog, then redirect to somewhere |
 | Destroy | /dogs/:id | DELETE | delete a dog, then redirect to somewhere |
+
+
+
+
+
+
+
+
+
+
 
 
 
