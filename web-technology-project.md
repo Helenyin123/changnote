@@ -1308,7 +1308,7 @@ There are 7 RESTful routes, it's a pattern and a convention to structure your ro
 | New | /dogs/new | GET | show new dog form | N/A |
 | Create | /dogs | POST | create a new dog and redirect to somewhere | Dogs.create\(\) |
 | Show | /dogs/:id | GET | shows info about one dog | Dogs.findById\(\) |
-| Edit | /dogs/:id/edit | GET | show edit form for one dog | Dogs.find\(\) |
+| Edit | /dogs/:id/edit | GET | show edit form for one dog | Dogs.findById\(\) |
 | Update | /dogs/:id | PUT | update a dog, then redirect to somewhere | Dogs.findByIdAndUpdate\(\) |
 | Destroy | /dogs/:id | DELETE | delete a dog, then redirect to somewhere | Dogs.findByIdAndDelete\(\) |
 
