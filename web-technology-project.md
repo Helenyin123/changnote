@@ -1159,6 +1159,18 @@ app.get("/friends", function(req, res){
 </form>
 ```
 
+If there are many inputs in the form, when sending data from a form, instead of using `<input type="text" name="title">` we could have `<input type="text" name="blog[title]">`. What this will do, instead of making title available directly from `req.body.title`. It will put it inside of an object, like `req.body.blog.title`. In this way, the form created an object and every input in the object exist in that object. We could obtain that object directly from `req.body.blog`.
+
+```html
+<form action="/blogs" method="POST">
+    <input type="text" name="blog[title]" placeholder="title">
+    <input type="date" name="blog[created]" placeholder="created date">
+    <input type="text" name="blog[image]" placeholder="image url">
+    <input type="text" name="blog[body]" placeholder="content">
+    <button>Submit!</button>
+</form>
+```
+
 ## 5. **API - Application Programming Interface**
 
 It's ways for you to write code that interact with other application services. Web API is api that you interact with through the web \(http request\).
