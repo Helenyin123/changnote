@@ -1043,7 +1043,7 @@ Before using ejs template, install ejs in npm: `npm install ejs --save`
 
 `<%= %>`: it will render the value that is returned by javascript to HTML
 
-`<%- %>`
+`<%- %>`: it will evaluate the value as html code, so if we have \`&lt;%- "&lt;strong&gt;This is HTML Code&lt;/strong&gt;"%&gt; , the text will be bolded when display.
 
 **EJS Control Flow: **you must have `<% %>`  in every line for javascript
 
