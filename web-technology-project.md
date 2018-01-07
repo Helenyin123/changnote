@@ -1304,6 +1304,53 @@ Cat.find({}, function(err, cats){
 });
 ```
 
+#### Data Association
+
+Associations allows us to have multiple collections of data related to each other. Data is related and there are different types of relationships:** one to one, one to many, many to many.** eg. one book have one publisher, one user can have many photos, students can sign up many courses and each course can have many students. 
+
+**Embedding Data**
+
+We can add one data schema into the other data schema definition, so that two data are related to each other. Notice that the order of schema definition matters. The added data schema must be defined first. Th example below is a user will have many posts, we want to relate user and post.
+
+```js
+//Post Schema
+var postSchema = new mongoose.Schema({
+    title: String,
+    content: String
+});
+var Post = mongoose.model("Post", postSchema);
+// User Schema, postSchema is embeded in userSchema
+// postSchema need to be defined before userSchema
+var userSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    posts: [postSchema]
+});
+//{usePushEach: true});
+var User = mongoose.model("User", userSchema);
+
+// User.find() will return an array of find objects
+// user.findOne() will return one object
+User.findOne({name:"Hermione Granger"}, function(err, user){
+    user.posts.push({
+        title: "Three Things I really Hate",
+        content: "Voldemort. Voldemort. Voldemort"
+    });
+    // need to save the modified user
+    user.save(function(err, user){
+      if (err) {
+          console.log(err);
+      } else {
+          console.log(user);
+      }
+    });
+});
+```
+
+**Referencing Data**
+
+
+
 ## 7. RESTful Routes
 
 **REST\(Representational State Transfer\):** a mapping between HTTP method and CRUD.
@@ -1319,6 +1366,8 @@ There are 7 RESTful routes, it's a pattern and a convention to structure your ro
 | Edit | /dogs/:id/edit | GET | show edit form for one dog | Dogs.findById\(\) |
 | Update | /dogs/:id | PUT | update a dog, then redirect to somewhere | Dogs.findByIdAndUpdate\(\) |
 | Destroy | /dogs/:id | DELETE | delete a dog, then redirect to somewhere | Dogs.findByIdAndDelete\(\) |
+
+
 
 
 
