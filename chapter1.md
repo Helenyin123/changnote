@@ -30,10 +30,10 @@ Java offers automatic garbage collection, which may be bypassed in specific circ
 #### Difference Between Java and Python
 
 | Java | Python |
-| :--- | :--- |
-| Statically Typed | Dynamic Typed |
+| :---: | :---: |
+| Static Types | Dynamic Types |
 
 **Type**
 
-In java, all variable names must be explicitly declared. In python. you never declare anything. Assignment statement binds a name to an object and the object can be any type. Java container objects\(vector and arraylist\) hold objects of generic type. But can't hold primitive type. You must first convert int to Integer. 
+In java, all variable names must be explicitly declared. In python. you never declare anything. Assignment statement binds a name to an object and the object can be any type. Java container objects\(vector and arraylist\) hold objects of generic type. But can't hold primitive type. You must first convert int to Integer.
 
