@@ -27,3 +27,13 @@ Some languages are platform independent at the source code level \(C/C++ is a go
 
 Java offers automatic garbage collection, which may be bypassed in specific circumstances via the real time java specification. Memory management in C++ is usually done via constructors, destructors and small pointers. The C++ standard permits garbage collection, but doesn't require it. Garbage collection is rarely used in practice.
 
+#### Difference Between Java and Python
+
+| Java | Python |
+| :--- | :--- |
+| Statically Typed | Dynamic Typed |
+
+**Type**
+
+In java, all variable names must be explicitly declared. In python. you never declare anything. Assignment statement binds a name to an object and the object can be any type. Java container objects\(vector and arraylist\) hold objects of generic type. But can't hold primitive type. You must first convert int to Integer. 
+

@@ -7,19 +7,17 @@
 
 * **Consistency & Availability \(CRUD-create, read, update, delete\): **MySQL is more consistency, so it is widely used by bank system. NoSQL sacrifice consistency to make it more available, which is suitable for website service. MySQL follows ACID properties \(Atomicity, Consistency, Isolation, Durability\). NoSQL follows CAP theorem \(Consistency, Availability, Partition Tolerance\).
 
-#### What's the difference between MongoDB, Cassandra and HBase?
+#### [What's the difference between MongoDB, Cassandra and HBase?](https://www.linkedin.com/pulse/real-comparison-nosql-databases-hbase-cassandra-mongodb-sahu/)
 
 Data are not always structured and fit into tidy rows and columns. Unstructured data is growing at twice the rate of structured data. That's why we need NoSQL database. They are all column-based key-value pair store.
 
-There are at least two kinds of database simplicity: development simplicity and operational simplicity. 
+There are at least two kinds of database simplicity: development simplicity and operational simplicity.
 
 **MongoDB **is most suitable for applications that support short run or single processes – it’s not really fit for long run processes found in the likes of an ERP environment
 
 **Cassandra**: Safely run/easy to manage/powerful at scale. It takes care of scaling and replication very well. CQL\(Cassandra Query Language\) is a SQL-like language which makes it easy to learn. It provides AP\(Availability,Partition-Tolerance\) from CAP theorem.
 
-**HBase **provides a record-based storage layer that enables fast, random reads and writes to data, complementing Hadoop by emphasizing high throughput at the expense of low-latency I/O. HBase was designed to provide optimal performance when consistency is critical. HBase is perfect for real-time querying of Big Data. Facebook messenger use it for messaging and real-time analytics. It provides CP form CAP theorem \(Consistency, Availability, Partition\). 
-
-
+**HBase **provides a record-based storage layer that enables fast, random reads and writes to data, complementing Hadoop by emphasizing high throughput at the expense of low-latency I/O. HBase was designed to provide optimal performance when consistency is critical. HBase is perfect for real-time querying of Big Data. Facebook messenger use it for messaging and real-time analytics. It provides CP form CAP theorem \(Consistency, Availability, Partition\).
 
 | Name | MongoDB | Cassandra | HBase |
 | :---: | :---: | :---: | :---: |
@@ -30,6 +28,7 @@ There are at least two kinds of database simplicity: development simplicity and 
 | Durability \(make data persistent\) | yes | yes | yes |
 | Access Method | JSON | CQL/Thrift | Java API/Restful API/Thrift |
 | Data Schema | schema-free | schema-free | schema-free |
+| Secondary Index | Support | Not Support | Support |
 
 **HBase**
 
@@ -49,10 +48,5 @@ Usage: Twitter
 
 **MongoDB**
 
-Master-Slave model, CP\(Consistency, Partition\) on CAP  
-
-
- 
-
-
+Master-Slave model, CP\(Consistency, Partition\) on CAP
 
