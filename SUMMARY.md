@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [DataBase Knowledge](README.md)
 * [Java, C++, Python Basic Knowledge](chapter1.md)
 * [Web Technology Project](web-technology-project.md)
 * [Markdown Notes](markdown-notes.md)

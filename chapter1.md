@@ -4,14 +4,14 @@
 
 | Java | C++ |
 | :---: | :---: |
-| Platform Independent  | Platform Dependent |
+| Platform Independent | Platform Dependent |
 | Run in Java Virtual Machine | Run in Native Executable Machine |
-| No pointers |  Have Pointers |
+| No pointers | Have Pointers |
 | Support Pass-by-Reference and Pass-by-Value on all types | All types\(primitive & reference\) are passed by value |
 | \(Arithmetic, Comparison\) Operators Not Overridable | Support Operator Overloading |
 | Automatic Garbage Collection | Manually Memory Management |
 | Support Multithreading | Doesn't Support Multithreading |
-| No Templates | Support Templates |
+| No Templates, support Generic | Support Templates |
 | No Global Variables | Have Global Variables |
 | Only Single Inheritance of class | Support multiple inheritance of class |
 
@@ -23,10 +23,7 @@ Some languages are platform independent at the source code level \(C/C++ is a go
 
 ##### Inheritance
 
-##### Garbage Collection & Memory Management  
-Java offers automatic garbage collection, which may be bypassed in specific circumstances via the real time java specification. Memory management in C++ is usually done via constructors, destructors and small pointers. The C++ standard permits garbage collection, but doesn't require it. Garbage collection is rarely used in practice. 
+##### Garbage Collection & Memory Management
 
-
-
-
+Java offers automatic garbage collection, which may be bypassed in specific circumstances via the real time java specification. Memory management in C++ is usually done via constructors, destructors and small pointers. The C++ standard permits garbage collection, but doesn't require it. Garbage collection is rarely used in practice.
 
