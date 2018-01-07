@@ -1187,6 +1187,7 @@ A well formed XML document requires :
 * Content must be delimited with a beginning and end tag.
 * Content must be properly nested without overlapping or missing. Parents within roots, children within parents. 
 * The tags are case-sensitive, the beginning and end tags must match exactly. Tag name can't contain space or start with digit number.
+* There should be a root element that wrap every element inside it.
 
 ```markdown
 <person>
