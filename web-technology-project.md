@@ -1181,6 +1181,13 @@ If we make HTTP request by website domain, we will get HTML back. It contains th
 
 Its syntax is similar to HTML, but it doesn't describe structure, it represent data key-value pair. There is no functional tag.
 
+A well formed XML document requires :
+
+* Content must be defined.
+* Content must be delimited with a beginning and end tag.
+* Content must be properly nested without overlapping or missing. Parents within roots, children within parents. 
+* The tags are case-sensitive, the beginning and end tags must match exactly. Tag name can't contain space or start with digit number.
+
 ```markdown
 <person>
     <name>Travis</name>
