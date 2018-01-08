@@ -486,7 +486,7 @@ User.findOne({email:"bob@gmail.com"}).populate("posts").exec(function(err, user)
 
 **module.exports**
 
-To clean up the code and make it more module, we can separate data schema definition with other javascript code. We put all data schema definition files under "models" directory. It will be convenient for code reuse. eg. create a "user.js" file in "models" directory, use `module.exports`to export the schema out. Then require the file in "app.js" file.
+To clean up the code and make it more module and convenient for code reuse. we can separate some code snippets with other javascript code. For example, we can put all data schema definition files under "models" directory. eg. create a "user.js" file in "models" directory, use `module.exports`to export the schema out. Then require the file in "app.js" file.
 
 ```js
 var mongoose = require("mongoose");
