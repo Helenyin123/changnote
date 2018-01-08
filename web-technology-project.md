@@ -1375,6 +1375,7 @@ Post.create({
 }, function(err, post){
     User.findOne({email: "bob@gmail.com"}, function(err, user){
         user.posts.push(post);
+        // if user.save doesn't work, try user.update
         user.save(function(err, updateUser){
             if (err) {
                 console.log(err);
