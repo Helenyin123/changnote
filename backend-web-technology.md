@@ -484,6 +484,32 @@ User.findOne({email:"bob@gmail.com"}).populate("posts").exec(function(err, user)
 });
 ```
 
+**module.exports**
+
+To clean up the code and make it more module, we can separate data schema definition with other javascript code. We put all data schema definition files under "models" directory. It will be convenient for code reuse. eg. create a "user.js" file in "models" directory, use `module.exports`to export the schema out. Then require the file in "app.js" file.
+
+```js
+var mongoose = require("mongoose");
+// User Schema stores reference
+// postSchema need to be defined before userSchema
+var userSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    posts: [{type: mongoose.Schema.Types.ObjectId, ref: "Post"}]
+});
+// return the schema 
+module.exports = mongoose.model("User", userSchema);
+```
+
+```js
+var mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://localhost/demo_1", {useMongoClient: true});
+// require data schema
+var Post = require("./models/post");
+var User = require("./models/user");
+```
+
 ## 7. RESTful Routes
 
 **REST\(Representational State Transfer\):** a mapping between HTTP method and CRUD.
@@ -499,7 +525,6 @@ There are 7 RESTful routes, it's a pattern and a convention to structure your ro
 | Edit | /dogs/:id/edit | GET | show edit form for one dog | Dogs.findById\(\) |
 | Update | /dogs/:id | PUT | update a dog, then redirect to somewhere | Dogs.findByIdAndUpdate\(\) |
 | Destroy | /dogs/:id | DELETE | delete a dog, then redirect to somewhere | Dogs.findByIdAndDelete\(\) |
-
 
 
 
