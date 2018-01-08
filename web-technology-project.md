@@ -680,7 +680,7 @@ movie.printComments = function() {
 movie.printComments();
 ```
 
-## 4. DOM - Document Object Model
+## 5. DOM - Document Object Model
 
 The DOM is the interface between Javascript and HTML + CSS. It all starts with the root node - document object. The process is that we first select an element, then manipulate it.
 
@@ -770,7 +770,8 @@ function clicked(){console.log("Button has been clicked!")};
 * **"input": **when a change to the element value is changed. eg. &lt;input&gt;&lt;select&gt;&lt;textarea&gt;. This event fires more often.
 * **"mouseover": **fires when the mouse hover over this element.
 * **"mouseout": **fires when the mouse hover out this element
-* ## 5. jQuery
+
+## 6. jQuery
 
 jQuery is a javascript library, or DOM manipulation library. It have many useful methods like: select elements, manipulate elements, create elements, add event listener, animate elements, add effects, make http requests\(AJAX\), etc.
 
@@ -908,3 +909,6 @@ In oder to get rid of the Cross Origin errors in the console, you'll need to run
 2. Run `python -m simpleHTTPServer`
 3. Open up your browser and navigate to [http://localhost:8000](http://localhost:8000)
 4. Select the html file
+
+
+
