@@ -534,7 +534,19 @@ There are 7 RESTful routes, it's a pattern and a convention to structure your ro
 | Update | /dogs/:id | PUT | update a dog, then redirect to somewhere | Dogs.findByIdAndUpdate\(\) |
 | Destroy | /dogs/:id | DELETE | delete a dog, then redirect to somewhere | Dogs.findByIdAndDelete\(\) |
 
+## 8. YelpCamp Project
+
 **seeds file:** run the seeds file every time the server start. It will empty all data in the database and add in some sample data to work with.
 
 **Nested Routes: **some routes like create and update new comment, this action is specific to a certain campground. So we need to know both the campground id and comment information. The route that create a comment will be "/campgrounds/:id/comments/new", the route that update the campground and redirect to show  page is "/campgrounds/:id/comments". These are nested routes. To store ejs file to comments, we need to make separate directories for "campgrounds" and "comments" under "views" file, so that they have separate "new.ejs"
+
+#### User Authentication
+
+**Passport JavaScript:**
+
+**Passport Local Package:**
+
+
+
+
 
