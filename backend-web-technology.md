@@ -482,6 +482,14 @@ User.findOne({email:"bob@gmail.com"}).populate("posts").exec(function(err, user)
         console.log(user);
     }
 });
+
+User.findById(id).populate("posts").exec(function(err, user){
+        if (err) {
+            console.log(err);
+        } else {
+            res.render("show", {user: user});
+        }
+    });
 ```
 
 **module.exports**
@@ -526,7 +534,5 @@ There are 7 RESTful routes, it's a pattern and a convention to structure your ro
 | Update | /dogs/:id | PUT | update a dog, then redirect to somewhere | Dogs.findByIdAndUpdate\(\) |
 | Destroy | /dogs/:id | DELETE | delete a dog, then redirect to somewhere | Dogs.findByIdAndDelete\(\) |
 
-
-
-**seeds file:** run the seeds file every time the server start. It will empty all data in the database and add in some sample data to work with. 
+**seeds file:** run the seeds file every time the server start. It will empty all data in the database and add in some sample data to work with.
 
