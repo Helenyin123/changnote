@@ -528,3 +528,5 @@ There are 7 RESTful routes, it's a pattern and a convention to structure your ro
 
 
 
+**seeds file:** run the seeds file every time the server start. It will empty all data in the database and add in some sample data to work with. 
+
