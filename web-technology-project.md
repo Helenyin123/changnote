@@ -1306,7 +1306,7 @@ Cat.find({}, function(err, cats){
 
 #### Data Association
 
-Associations allows us to have multiple collections of data related to each other. Data is related and there are different types of relationships:** one to one, one to many, many to many.** eg. one book have one publisher, one user can have many photos, students can sign up many courses and each course can have many students. 
+Associations allows us to have multiple collections of data related to each other. Data is related and there are different types of relationships:** one to one, one to many, many to many.** eg. one book have one publisher, one user can have many photos, students can sign up many courses and each course can have many students.
 
 **Embedding Data**
 
@@ -1326,9 +1326,9 @@ var userSchema = new mongoose.Schema({
     email: String,
     posts: [postSchema]
 });
-//{usePushEach: true});
 var User = mongoose.model("User", userSchema);
 
+// add a new post to user
 // User.find() will return an array of find objects
 // user.findOne() will return one object
 User.findOne({name:"Hermione Granger"}, function(err, user){
@@ -1349,7 +1349,50 @@ User.findOne({name:"Hermione Granger"}, function(err, user){
 
 **Referencing Data**
 
+Instead of adding data schema to another data schema, we could add reference/id of a data to another data schema.
 
+```js
+//Post Schema
+var postSchema = new mongoose.Schema({
+    title: String,
+    content: String
+});
+// return the model
+var Post = mongoose.model("Post", postSchema);
+// User Schema stores reference
+// postSchema need to be defined before userSchema
+var userSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    posts: [{type: mongoose.Schema.Types.ObjectId, ref: "Post"}]
+});
+var User = mongoose.model("User", userSchema);
+
+// add a new post to the user
+Post.create({
+    title: "This is another post",
+    content: "learn how to reference data"
+}, function(err, post){
+    User.findOne({email: "bob@gmail.com"}, function(err, user){
+        user.posts.push(post);
+        user.save(function(err, updateUser){
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(updateUser);
+            }
+        });
+    });
+});
+// find all posts for a certain user
+User.findOne({email:"bob@gmail.com"}).populate("posts").exec(function(err, user){
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(user);
+    }
+});
+```
 
 ## 7. RESTful Routes
 
@@ -1366,8 +1409,6 @@ There are 7 RESTful routes, it's a pattern and a convention to structure your ro
 | Edit | /dogs/:id/edit | GET | show edit form for one dog | Dogs.findById\(\) |
 | Update | /dogs/:id | PUT | update a dog, then redirect to somewhere | Dogs.findByIdAndUpdate\(\) |
 | Destroy | /dogs/:id | DELETE | delete a dog, then redirect to somewhere | Dogs.findByIdAndDelete\(\) |
-
-
 
 
 
