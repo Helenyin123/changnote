@@ -542,11 +542,9 @@ There are 7 RESTful routes, it's a pattern and a convention to structure your ro
 
 #### User Authentication
 
-**Passport JavaScript:**
+**Library: **Passport JavaScript  **   **
 
-**Passport Local Package:**
+**Package:** Passport Local, Passport Local Mongoose, Express-Session
 
-
-
-
+**Session:** HTTP method is a stateless API. Session is a way to make http not stateless. It allow us to have  a state.
 
