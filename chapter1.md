@@ -14,6 +14,7 @@
 | No Templates, support Generic | Support Templates |
 | No Global Variables | Have Global Variables |
 | Only Single Inheritance of class | Support multiple inheritance of class |
+| Class\(structure + method\) and Object | Structures and Unions |
 
 ##### What is Platform Independent?
 
