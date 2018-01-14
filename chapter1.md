@@ -87,5 +87,49 @@ Almost all prototype-based system are dynamically typed. In most prototype langu
 
 **Object**: instances of classes
 
-**Encapsulation**
+**Encapsulation:** If a class doesn't allow outside code to access internal object data, it permits access through class methods only, this form of data hiding is called encapsulation.** **Encapsulation** **binds the data field and methods together and keep both safe from outside interference and misuse. Java and C++ have keywords like "public"\(access form all classes\), "private"\(access form the same class\), "protected"\(access from the same class and its subclasses\).
+
+**Inheritance: **"is a type of" relationship.
+
+subclasses can override the methods defined by superclasses. Abstract classes can't be instantiated as objects, they exist only for the purpose of inheritance into other concrete class.
+
+**Polymorphism**: calling code can be altered based on whether an object belongs to a parent class or one of its descendants.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
