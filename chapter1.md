@@ -48,7 +48,13 @@ In java, all variable names must be explicitly declared. In python. you never de
 * Hashtable doesn't allow null keys or values. HashMap allows one null key and any number of null values.
 * One of Hashmap's LinkedHashMap,  
 
-
+#### Java 8 New Features
+* **Lambda Expression**: enable you to treat a function as a method argument or code as data. 
+* **Method Reference**: It's used to refer methods of functional interface. They are a subset of lambda expression.
+* **Default Method**: enable you to add a new method to the interface of your library ad ensure binary compatibility with older version.
+* **ForEach() Method**: a new method to iterate over collections. It's defined in Iterable and Stream interface.
+* **Stream API**: stream is introduced to process elements in sequence
+* **Date and Time API**: being improved compare to previous version
 
 ## Object Oriented Programming
 
