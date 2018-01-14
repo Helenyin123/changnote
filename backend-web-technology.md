@@ -530,6 +530,8 @@ In REST architecture, data and functionality are called resources, they are acce
 **PUT**: update existing information
 **DELETE**: delete existing information
 
+REST is stateless, each method is completely stand-alone, it has no knowledge of previous requests.
+
 ####RESTful Routes
 There are 7 RESTful routes, it's a pattern and a convention to structure your routes :
 
