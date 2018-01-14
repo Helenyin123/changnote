@@ -1,4 +1,6 @@
-# Java, C++, Python Basic Knowledge
+# Languages and OOP Basic Knowledge
+
+## Java, C++ and Python
 
 #### [Difference Between Java and C++](https://www.wikiwand.com/en/Comparison_of_Java_and_C%2B%2B)
 
@@ -94,42 +96,4 @@ Almost all prototype-based system are dynamically typed. In most prototype langu
 subclasses can override the methods defined by superclasses. Abstract classes can't be instantiated as objects, they exist only for the purpose of inheritance into other concrete class.
 
 **Polymorphism**: calling code can be altered based on whether an object belongs to a parent class or one of its descendants.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
