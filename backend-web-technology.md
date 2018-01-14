@@ -518,10 +518,19 @@ var Post = require("./models/post");
 var User = require("./models/user");
 ```
 
-## 7. RESTful Routes
+## 7. REST Architecture
 
 **REST\(Representational State Transfer\):** a mapping between HTTP method and CRUD.
 
+In REST architecture, data and functionality are called resources, they are accessed using links/url on the web. The REST architecture constrains to a client/server architecture and use a stateless communication protocol called HTTP. Client and server exchange resources by using standardized interface and protocol.
+
+####HTTP Method / Restful API
+**GET**: retrieve/query information from server
+**POST**: Create new information to server
+**PUT**: update existing information
+**DELETE**: delete existing information
+
+####RESTful Routes
 There are 7 RESTful routes, it's a pattern and a convention to structure your routes :
 
 | Route Name | Path \(URL\) | HTTP Method | Description | Mongoose Method |
