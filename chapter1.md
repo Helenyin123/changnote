@@ -38,3 +38,83 @@ Java offers automatic garbage collection, which may be bypassed in specific circ
 
 In java, all variable names must be explicitly declared. In python. you never declare anything. Assignment statement binds a name to an object and the object can be any type. Java container objects\(vector and arraylist\) hold objects of generic type. But can't hold primitive type. You must first convert int to Integer.
 
+## Object Oriented Programming
+
+OOP is a programming paradigm that based on the concept of objects. Object contains data, called filed/attributes and code in the form of procedures, known as method. we can access and modify an object's data filed by calling methods. 
+
+One significant OOP style is **class-based,** meaning that objects are instance of classes.
+
+ Another OOP style is** prototype-based, **in which the inheritance is performed via a process of reusing existing object via delegation that serve as prototypes. In prototype-based language, there are no explicit classes, objects inherit directly from other objects through a prototype property. There are two methods of constructing new a new object: create an object from nothing or through cloning an existing object.
+
+```js
+var foo = {name: "foo", one: 1, two:2};
+var bar = {two: "two", three: 3};
+// Object.setPrototypeOf() is a method to set inheritance
+// foo is now bar's prototype
+Object.setPrototypeOf(bar, foo);
+bar.one; //return 1
+bar.two; // return "two"
+bar.three; // return 3
+bar.name; // return "foo"
+```
+
+```js
+var foo = {one: 1, two: 2};
+var bar = Object.create(foo);
+bar.three = 3;
+bar.one;//return 1
+bar.two; //return 2
+bar.three; // return 3
+```
+
+In class-based language, a new instance is constructed through a class's constructor function. The new instance will inherit all the methods and properties that were defined in the class.
+
+Prototype OOP use generalized objects, which can be cloned and extended. Many prototype-based systems encourage the alternation of prototypes during runtime, whereas only a few class-based system allow classes to be altered during execution of a program.
+
+Almost all prototype-based system are dynamically typed. In most prototype languages there exist a root object, often called Object, which is the default prototype for all other created objects. 
+
+| Class-Based OOP | Prototype-Based OOP |
+| :---: | :---: |
+| C++, Java, Python, Ruby | JavaScript, Python, Perl, R, Self |
+| Object inherits from class | Object inherits from other object through prototype property |
+|  |  |
+| Class is defined beforehand, normally can't be changed later | Prototype's variables and methods can be added or changed later. Both data and methods are referred as "slots". |
+| Objects are instance of class | Objects are primary entities. Prototype is implicit. |
+| C++ support multiple inheritance. Java support single inheritance. | Every Object has one prototype link. Only support single inheritance. |
+| C++, Java is statically typed. Python is dynamically typed. | Mostly dynamically typed |
+| Inheritance\(relationship between class and object\) | Delegation\(link between object\) |
+
+**Class: **The abstraction of a give type of real objects. It define the data members and member functions.
+
+**Object**: instances of classes
+
+**Encapsulation**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
