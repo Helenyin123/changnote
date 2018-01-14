@@ -40,6 +40,16 @@ Java offers automatic garbage collection, which may be bypassed in specific circ
 
 In java, all variable names must be explicitly declared. In python. you never declare anything. Assignment statement binds a name to an object and the object can be any type. Java container objects\(vector and arraylist\) hold objects of generic type. But can't hold primitive type. You must first convert int to Integer.
 
+### Java
+
+**Difference between HashMap Vs HashTable:**
+
+* Hashtable is synchronized, whereas Hashmap is not. Hashmap is better for non-threaded application.
+* Hashtable doesn't allow null keys or values. HashMap allows one null key and any number of null values.
+* One of Hashmap's LinkedHashMap,  
+
+
+
 ## Object Oriented Programming
 
 OOP is a programming paradigm that based on the concept of objects. Object contains data, called filed/attributes and code in the form of procedures, known as method. we can access and modify an object's data filed by calling methods.

@@ -1,7 +1,7 @@
 # Summary
 
-* [Frontend - Web Technology](web-technology-project.md)
-* [Backend - Web Technology](backend-web-technology.md)
+* [Frontend - Web Project](web-technology-project.md)
+* [Backend - Web Project](backend-web-technology.md)
 * [DataBase Knowledge](README.md)
 * [Languages and OOP Basic Knowledge](chapter1.md)
 * [Interview Behavior Preparation](interview-behavior-preparation.md)
