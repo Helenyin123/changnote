@@ -72,7 +72,9 @@ TCP and UDP are protocols used to send bits of data, known as packets over the I
 
 **Replication: **refers to frequently copying data cross multiple machines. Multiple copies of data exists across machines. It helps in case one or more machines die due to failure.
 
-**Master and Slave Database:** master database receive data from application, slave database receive a stream of updates from master in nearly real-time. Slave apply the changes that master validated and  approved. Master database is less burdened by query and slave is less burdened by writes.  
+**Master and Slave Database:** master database receive data from application, slave database receive a stream of updates from master in nearly real-time. Slave apply the changes that master validated and  approved. Master database is less burdened by query and slave is less burdened by writes. From application point of view, slaves are read only and masters are read-write.
+
+Writes are more expensive than reads. Most web application requires a much high ratio of reads to writes. So set up master-slave database could make an application distribute its queries efficiently.
 
 **Sharding:** for some huge system, data doesn't fit into one machine. Splitting the very large database into smaller, faster and more manageable parts called data shards.
 
