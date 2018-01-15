@@ -117,7 +117,7 @@ Deep Dive\(20- 30min\)
 
 Design a Distributed Key Value Caching System![Cache](https://dajh2p2mfq4ra.cloudfront.net/assets/site-images/system_design/cache_introduction.jpg)A cache has to be inherently of low latency. Which means all cache data has to reside in main memory, can't stored in disk. A production level caching machine would be 72G/144G of RAM,.
 
-To cache on the scale of Google or Twitter, the total size of the cache would be a few TBs. if we assume total cache size is 30TB, the number of queries per second is 10M QPS and one cache machine has 72G of RAM. Then the number machines required to cache is 30TB/72GB =
+To cache on the scale of Google or Twitter, the total size of the cache would be a few TBs. if we assume total cache size is 30TB, the number of queries per second is 10M QPS and one cache machine has 72G of RAM. Then the number machines required to cache is 30TB/72GB = 420 machine.
 
 **Cache Eviction Strategy:** determines when do we evict entries from cache and which specific entries to evict. Evict strategies includes least recently used\(LRU\), least frequently used\(LFU\), first in first out\(FIFO\), time-based\(entries that weren't touched for a period of time are cleared\).
 
