@@ -78,9 +78,19 @@ TCP and UDP are protocols used to send bits of data, known as packets over the I
 
 **Vertical Scaling: **increase the resources\(CPU, RAM, storage\) of the server to improve the performance
 
-For example, Let's say you own a restaurant which is now exceeding its seating capacity. One way of accommodating more people \(scaling\) would be to add more and more chairs \(scaling vertically\). However since the space is limited, you won’t be able to add more chairs once the space is full.  Another way of scaling would be to open new branches of the restaurant \(horizontal scaling\).
+For example, Let's say you own a restaurant which is now exceeding its seating capacity. One way of accommodating more people \(scaling\) would be to add more and more chairs \(scaling vertically\). However since the space is limited, you won’t be able to add more chairs once the space is full.  Another way of scaling would be to open new branches of the restaurant \(horizontal scaling\).
 
 **CAP Theorem: **In a distributed system, it's impossible to guarantee all of three properties, we can only guarantee two out of three, which is consistency, availability, partition-tolerance.
+
+**Consistency: **In a distribute system with many machines, data is the same in every machines.
+
+**Eventually Consistency: **At some point, the data may have many versions in different machines, but eventually, they will reach a state where all data are the same.
+
+**Availability**: the ability to always respond to queries irrespective nodes going down.
+
+**Partition-Tolerance: **The cluster continues to function even if there is communication break\(partition\) between nodes.
+
+### Steps to approach a problem
 
 
 
