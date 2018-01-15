@@ -94,6 +94,15 @@ For example, Let's say you own a restaurant which is now exceeding its seating c
 
 **Partition-Tolerance: **The cluster continues to function even if there is communication break\(partition\) between nodes.
 
+#### Memory Estimation
+
+| Bit Size | Estimate Exponential to 10 | Estimate Exponential to 2 |
+| :---: | :---: | :---: |
+| 1 KiloBytes\(KB\) | 1024 ~ 10^3 | 2^10 |
+| 1 MegaBytes\(MB\) | 1048576 ~ 10^6 | 2^20 |
+| 1 GigaByte\(GB\) | ~10^9 | 2^30 |
+| 1 TeraByte\(TB\) | ~10^12 | 2^40 |
+
 ### Steps to approach a problem
 
 Feature Expectation\(2 min\):  Try to list down all the features you can think of which the system should support.
@@ -106,7 +115,9 @@ Skeleton of the Design\(\)
 
 Deep Dive\(20- 30min\)
 
-Design a Distributed Key Value Caching System![Cache](https://dajh2p2mfq4ra.cloudfront.net/assets/site-images/system_design/cache_introduction.jpg)To cache on the scale of Google or Twitter, the total size of the cache would be a few TBs. 
+Design a Distributed Key Value Caching System![Cache](https://dajh2p2mfq4ra.cloudfront.net/assets/site-images/system_design/cache_introduction.jpg)A cache has to be inherently of low latency. Which means all cache data has to reside in main memory, can't stored in disk. A production level caching machine would be 72G/144G of RAM,. 
+
+To cache on the scale of Google or Twitter, the total size of the cache would be a few TBs. if we assume total cache size is 30TB, the number of queries per second is 10M QPS and one cache machine has 72G of RAM. Then the number machines required to cache is 30TB/72GB = 
 
 **Cache Eviction Strategy:** determines when do we evict entries from cache and which specific entries to evict. Evict strategies includes least recently used\(LRU\), least frequently used\(LFU\), first in first out\(FIFO\), time-based\(entries that weren't touched for a period of time are cleared\).
 
@@ -115,32 +126,6 @@ Design a Distributed Key Value Caching System![Cache](https://dajh2p2mfq4ra.clou
 * **Write Through Cache**: write is confirmed as success only if  writes to both DB and cache succeed. It's useful for applications which write and re-read information quickly. But write latency will be higher because need to write to both DB and cache.
 * **Write Around Cache: **write goes directly to DB. Cache read data from DB. It ensures lower write load and faster writes.
 * **Write Back Cache**: write is conformed as soon as the write to cache completes. The cache then asynchronously syncs this write to DB. This leads to quick write latency and high write throughput. But we stand the risk of losing data in case the caching layer dies. We can introduce more than one replica acknowledging the writes. 
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
