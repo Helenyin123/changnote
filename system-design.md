@@ -115,9 +115,17 @@ Skeleton of the Design\(\)
 
 Deep Dive\(20- 30min\)
 
-Design a Distributed Key Value Caching System![Cache](https://dajh2p2mfq4ra.cloudfront.net/assets/site-images/system_design/cache_introduction.jpg)A cache has to be inherently of low latency. Which means all cache data has to reside in main memory, can't stored in disk. A production level caching machine would be 72G/144G of RAM,.
+#### Design a Distributed Key Value Caching System
 
-To cache on the scale of Google or Twitter, the total size of the cache would be a few TBs. if we assume total cache size is 30TB, the number of queries per second is 10M QPS and one cache machine has 72G of RAM. Then the number machines required to cache is 30TB/72GB = 420 machine.
+![Cache](https://dajh2p2mfq4ra.cloudfront.net/assets/site-images/system_design/cache_introduction.jpg)
+
+A cache has to be inherently of low latency. Which means all cache data has to reside in main memory, can't stored in disk. A production level caching machine would be 72G/144G of RAM,.
+
+To cache on the scale of Google or Twitter, the total size of the cache would be a few TBs. if we assume total cache size is 30TB, the number of queries per second is 10M QPS and one cache machine has 72G of RAM. Then the number machines required to cache is 30TB/72GB = 420 machine, each machine would handle around 10M/420 = 24000 QPS. It's will still lead to high latency. So what if we shard among machines with 16GB of RAM, we need 30TB/16GB = 1875 machines, each machine will handle 10M/1875 = 5500 QPS which should be reasonable. With lower main memory size, CPU cycles required for access lowers as well.
+
+The shard number for every key could be calculate as **hash\(key\)%totalShards.** If the key is an auto incremental userid, the hash\(key\) might not work well. The downside is that if the total number of shard changes, all currently cached data becomes invalid. Another way to do it is use **consistent hashing **with multiple copies if every shard on the ring. This would preform well as new shards are added.
+
+If we only have one machine per shard, if that machine goes down, all requests to that shard will start hitting DB. We could have multiple machines maintain the same amount of data. A read query could go to all the server in the shard, but write query can only happen in one master machine. 
 
 **Cache Eviction Strategy:** determines when do we evict entries from cache and which specific entries to evict. Evict strategies includes least recently used\(LRU\), least frequently used\(LFU\), first in first out\(FIFO\), time-based\(entries that weren't touched for a period of time are cleared\).
 
