@@ -30,12 +30,26 @@ Some languages are platform independent at the source code level \(C/C++ is a go
 
 Java offers automatic garbage collection, which may be bypassed in specific circumstances via the real time java specification. Memory management in C++ is usually done via constructors, destructors and small pointers. The C++ standard permits garbage collection, but doesn't require it. Garbage collection is rarely used in practice.
 
-#### Difference Between Java and Python
+#### Comparison Between Java and Python
+
+**Similarity**
+1. Object Oriented Language
+2. Excellent cross platform support
+3. Immutable Strings
+4. Deep Relative Standard Library
+
+**Difference**
+1. Java and C++ use braces and semicolon to separate sentence, while Python use tab/indentation, which makes it to be the most human readable programming languages in wide use.
+2. Python compile the program automatically at runtime, java need to compile first then run the program
+3. Python have a large library for machine learning and data science research, java has much less resource in those field.
+4. Java is statically typed, which means Names are bound to types at compile time via explicit type declaration. Python is dynamically typed. Names have no strong binding to their type, which can be very powerful and convenient. 
 
 | Java | Python |
 | :---: | :---: |
 | Static Types | Dynamic Types |
-
+| Braces and Semicolon to separate sentence| Indentation/Tab to separate sentence|
+|Compile first then rum the program | Compile automatically at runtime|
+|Less resources than Python | large library for machine learning and data science|
 **Type**
 
 In java, all variable names must be explicitly declared. In python. you never declare anything. Assignment statement binds a name to an object and the object can be any type. Java container objects\(vector and arraylist\) hold objects of generic type. But can't hold primitive type. You must first convert int to Integer.
