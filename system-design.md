@@ -96,13 +96,51 @@ For example, Let's say you own a restaurant which is now exceeding its seating c
 
 ### Steps to approach a problem
 
-Feature Expectation\(2 min\):  what are the features we need to design, figure out the user cases.
+Feature Expectation\(2 min\):  Try to list down all the features you can think of which the system should support.
 
-Estimation\(2-5min\): estimate the scale required for the system\(level of sharding\). If the total data required for the system fits on a single machine, we might not need to go into sharding. If the most frequently used data fits on a single machine, then caching could be done on a single machine.
+Estimation\(2-5min\): come up with the estimated numbers of how scalable our system should be. Important parameters includes number of queries per second and the data which the system will be required to handle. If the total data required for the system fits on a single machine, we might not need to go into sharding. If the most frequently used data fits on a single machine, then caching could be done on a single machine.
 
 Design Goal\(1min\):
 
 Skeleton of the Design\(\)
 
 Deep Dive\(20- 30min\)
+
+Design a Distributed Key Value Caching System![Cache](https://dajh2p2mfq4ra.cloudfront.net/assets/site-images/system_design/cache_introduction.jpg)To cache on the scale of Google or Twitter, the total size of the cache would be a few TBs. 
+
+**Cache Eviction Strategy:** determines when do we evict entries from cache and which specific entries to evict. Evict strategies includes least recently used\(LRU\), least frequently used\(LFU\), first in first out\(FIFO\), time-based\(entries that weren't touched for a period of time are cleared\).
+
+**Cache System Access Pattern:**
+
+* **Write Through Cache**: write is confirmed as success only if  writes to both DB and cache succeed. It's useful for applications which write and re-read information quickly. But write latency will be higher because need to write to both DB and cache.
+* **Write Around Cache: **write goes directly to DB. Cache read data from DB. It ensures lower write load and faster writes.
+* **Write Back Cache**: write is conformed as soon as the write to cache completes. The cache then asynchronously syncs this write to DB. This leads to quick write latency and high write throughput. But we stand the risk of losing data in case the caching layer dies. We can introduce more than one replica acknowledging the writes. 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
