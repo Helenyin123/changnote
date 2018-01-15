@@ -113,3 +113,57 @@ subclasses can override the methods defined by superclasses. Abstract classes ca
 
 **Polymorphism**: calling code can be altered based on whether an object belongs to a parent class or one of its descendants.
 
+
+## Design Pattern
+A design pattern is a template for how to solve a problem that can be used in many different situations. 
+
+### Creational Design Pattern
+A design pattern that deal with object creation mechanism
+* **Singleton Pattern**:
+* **Factory Pattern**: uses factory methods to deal with creating objects without specifying the exact class of object that will be created. This is done by creating objects via a factory method, which is either specified in an interface and implemented in implementing classes (concrete classes); or implemented in a base class, which can be overridden when inherited in derived classes; rather than by a constructor.
+
+```java
+public class CurrencyFactory {
+    public static Currency getCurrencyByCountry(String cnty) throws Exception{
+        if("IN".equalsIgnoreCase(cnty)){
+            return new India();
+        } else if("USA".equalsIgnoreCase(cnty)){
+            return new USA();
+        }
+        throw new Exception("Invalid country...");
+    }
+    public static void main(String a[]){
+        Currency india = CurrencyFactory.getCurrencyByCountry("IN");
+        Currency usa = CurrencyFactory.getCurrencyByCountry("USA");
+        System.out.println("Indian currency: "+india.getCurrency());
+        System.out.println("Indian currency symbol: "+india.getSymbol());
+    }      
+}
+public interface Currency {
+    public String getCurrency();
+    public String getSymbol();
+}
+public class USA implements Currency{
+    @Override
+    public String getCurrency() {
+        return "Dollar";
+    } 
+    public String getSymbol() {
+        return "$";
+    }
+}
+public class India implements Currency{
+    @Override
+    public String getCurrency() {         
+        return "Rupee";
+    }
+    public String getSymbol() {
+        return "Rs";
+    }
+}
+```
+
+* **Abstract Factory Pattern**
+* **Builder Pattern**
+* **Prototype Pattern**
+
