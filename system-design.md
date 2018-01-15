@@ -72,6 +72,8 @@ TCP and UDP are protocols used to send bits of data, known as packets over the I
 
 **Replication: **refers to frequently copying data cross multiple machines. Multiple copies of data exists across machines. It helps in case one or more machines die due to failure.
 
+Master and Slave Database:
+
 **Sharding:** for some huge system, data doesn't fit into one machine. Splitting the very large database into smaller, faster and more manageable parts called data shards.
 
 **Horizontal Scaling:** add more servers to the system to improve the performance.
@@ -92,7 +94,13 @@ For example, Let's say you own a restaurant which is now exceeding its seating c
 
 ### Steps to approach a problem
 
+Feature Expectation\(2 min\):  what are the features we need to design, figure out the user cases.
 
+Estimation\(2-5min\): estimate the scale required for the system\(level of sharding\). If the total data required for the system fits on a single machine, we might not need to go into sharding. If the most frequently used data fits on a single machine, then caching could be done on a single machine.
 
+Design Goal\(1min\): 
 
+Skeleton of the Design\(\)
+
+Deep Dive\(20- 30min\)
 
