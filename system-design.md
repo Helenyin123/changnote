@@ -72,7 +72,7 @@ TCP and UDP are protocols used to send bits of data, known as packets over the I
 
 **Replication: **refers to frequently copying data cross multiple machines. Multiple copies of data exists across machines. It helps in case one or more machines die due to failure.
 
-Master and Slave Database:
+**Master and Slave Database:** master database receive data from application, slave database receive a stream of updates from master in nearly real-time. Slave apply the changes that master validated and  approved. Master database is less burdened by query and slave is less burdened by writes.  
 
 **Sharding:** for some huge system, data doesn't fit into one machine. Splitting the very large database into smaller, faster and more manageable parts called data shards.
 
@@ -98,7 +98,7 @@ Feature Expectation\(2 min\):  what are the features we need to design, figure o
 
 Estimation\(2-5min\): estimate the scale required for the system\(level of sharding\). If the total data required for the system fits on a single machine, we might not need to go into sharding. If the most frequently used data fits on a single machine, then caching could be done on a single machine.
 
-Design Goal\(1min\): 
+Design Goal\(1min\):
 
 Skeleton of the Design\(\)
 
