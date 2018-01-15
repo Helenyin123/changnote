@@ -32,24 +32,25 @@ Java offers automatic garbage collection, which may be bypassed in specific circ
 
 #### Comparison Between Java and Python
 
-**Similarity**
-1. Object Oriented Language
-2. Excellent cross platform support
-3. Immutable Strings
+**Similarity**  
+1. Object Oriented Language  
+2. Excellent cross platform support  
+3. Immutable Strings  
 4. Deep Relative Standard Library
 
-**Difference**
-1. Java and C++ use braces and semicolon to separate sentence, while Python use tab/indentation, which makes it to be the most human readable programming languages in wide use.
-2. Python compile the program automatically at runtime, java need to compile first then run the program
-3. Python have a large library for machine learning and data science research, java has much less resource in those field.
-4. Java is statically typed, which means Names are bound to types at compile time via explicit type declaration. Python is dynamically typed. Names have no strong binding to their type, which can be very powerful and convenient. 
+**Difference**  
+1. Java and C++ use braces and semicolon to separate sentence, while Python use tab/indentation, which makes it to be the most human readable programming languages in wide use.  
+2. Python compile the program automatically at runtime, java need to compile first then run the program  
+3. Python have a large library for machine learning and data science research, java has much less resource in those field.  
+4. Java is statically typed, which means Names are bound to types at compile time via explicit type declaration. Python is dynamically typed. Names have no strong binding to their type, which can be very powerful and convenient.
 
 | Java | Python |
 | :---: | :---: |
 | Static Types | Dynamic Types |
-| Braces and Semicolon to separate sentence| Indentation/Tab to separate sentence|
-|Compile first then rum the program | Compile automatically at runtime|
-|Less resources than Python | large library for machine learning and data science|
+| Braces and Semicolon to separate sentence | Indentation/Tab to separate sentence |
+| Compile first then rum the program | Compile automatically at runtime |
+| Less resources than Python | large library for machine learning and data science |
+
 **Type**
 
 In java, all variable names must be explicitly declared. In python. you never declare anything. Assignment statement binds a name to an object and the object can be any type. Java container objects\(vector and arraylist\) hold objects of generic type. But can't hold primitive type. You must first convert int to Integer.
@@ -63,10 +64,11 @@ In java, all variable names must be explicitly declared. In python. you never de
 * One of Hashmap's LinkedHashMap,  
 
 #### Java 8 New Features
+
 * **Lambda Expression**: enable you to treat a function as a method argument or code as data. 
 * **Method Reference**: It's used to refer methods of functional interface. They are a subset of lambda expression.
 * **Default Method**: enable you to add a new method to the interface of your library ad ensure binary compatibility with older version.
-* **ForEach() Method**: a new method to iterate over collections. It's defined in Iterable and Stream interface.
+* **ForEach\(\) Method**: a new method to iterate over collections. It's defined in Iterable and Stream interface.
 * **Stream API**: stream is introduced to process elements in sequence
 * **Date and Time API**: being improved compare to previous version
 
@@ -127,31 +129,33 @@ subclasses can override the methods defined by superclasses. Abstract classes ca
 
 **Polymorphism**: calling code can be altered based on whether an object belongs to a parent class or one of its descendants.
 
-
 ## Design Pattern
-A design pattern is a template for how to solve a problem that can be used in many different situations. 
 
-### Creational Design Pattern
+A design pattern is a template for how to solve a problem that can be used in many different situations.
+
+#### Creational Design Pattern
+
 A design pattern that deal with object creation mechanism
+
 * **Singleton Pattern**:
-* **Factory Pattern**: uses factory methods to deal with creating objects without specifying the exact class of object that will be created. This is done by creating objects via a factory method, which is either specified in an interface and implemented in implementing classes (concrete classes); or implemented in a base class, which can be overridden when inherited in derived classes; rather than by a constructor.
+* **Factory Pattern**: uses factory methods to deal with creating objects without specifying the exact class of object that will be created. This is done by creating objects via a factory method, which is either specified in an interface and implemented in implementing classes \(concrete classes\); or implemented in a base class, which can be overridden when inherited in derived classes; rather than by a constructor.
 
 ```java
 public class CurrencyFactory {
-    public static Currency getCurrencyByCountry(String cnty) throws Exception{
+    public static Currency getCurrencyByCountry(String cnty) throws Exception{
         if("IN".equalsIgnoreCase(cnty)){
-            return new India();
-        } else if("USA".equalsIgnoreCase(cnty)){
-            return new USA();
-        }
-        throw new Exception("Invalid country...");
-    }
+            return new India();
+        } else if("USA".equalsIgnoreCase(cnty)){
+            return new USA();
+        }
+        throw new Exception("Invalid country...");
+    }
     public static void main(String a[]){
-        Currency india = CurrencyFactory.getCurrencyByCountry("IN");
+        Currency india = CurrencyFactory.getCurrencyByCountry("IN");
         Currency usa = CurrencyFactory.getCurrencyByCountry("USA");
-        System.out.println("Indian currency: "+india.getCurrency());
-        System.out.println("Indian currency symbol: "+india.getSymbol());
-    }      
+        System.out.println("Indian currency: "+india.getCurrency());
+        System.out.println("Indian currency symbol: "+india.getSymbol());
+    }      
 }
 public interface Currency {
     public String getCurrency();
@@ -180,4 +184,19 @@ public class India implements Currency{
 * **Abstract Factory Pattern**
 * **Builder Pattern**
 * **Prototype Pattern**
+
+#### Structural Design Pattern
+
+* Adapter Pattern
+* Bridge Pattern
+* Composite Pattern
+* Proxy Pattern
+
+#### Behavior Design Pattern
+
+* Command Pattern
+* Iterator Pattern
+* Visitor Pattern
+
+
 
