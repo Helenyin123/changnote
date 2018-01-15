@@ -1,6 +1,6 @@
 # System Design
 
-### Concurrency 
+### Concurrency
 
 **Thread:** is a subset of the process. Thread is an entity within a process that can be scheduled for execution. All thread of a process share its virtual address space and system resource. Each thread maintains exception handlers, thread local storage, a unique thread identifier.
 
@@ -12,7 +12,7 @@
 * process are independent, while thread is a subset of a process
 * process carry more state information than threads, threads in the same process shared process state and memory.
 
-**Lock/Mutex\(mutual exclusive\)**: Lock allows only one thread enter in the part that is locked. Lock is not shared with any other processes. 
+**Lock/Mutex\(mutual exclusive\)**: Lock allows only one thread enter in the part that is locked. Lock is not shared with any other processes.
 
 **Spin-lock:** a lock which uses busy waiting. Usually a while loop keep checking the status of lock.
 
@@ -20,10 +20,10 @@
 
 ![deadlock](https://www.geeksforgeeks.org/wp-content/uploads/gq/2015/06/deadlock.png)
 
-**Methods for handling deadlock**
-1. Deadlock prevention/avoidance: don't let system intop deadlock state
-2. Deadlock detection/recovery: let deadlock occur, then do preemption to handle it once occurred.
-3. Ignore the problem:  deadlock is very rare, let it happen and reboot the system.(Both windows and UNIX take this method)
+**Methods for handling deadlock**  
+1. Deadlock prevention/avoidance: don't let system intop deadlock state  
+2. Deadlock detection/recovery: let deadlock occur, then do preemption to handle it once occurred.  
+3. Ignore the problem:  deadlock is very rare, let it happen and reboot the system.\(Both windows and UNIX take this method\)
 
 ```java
 public class MyDeadlock {
@@ -57,18 +57,14 @@ public static void main(String a[]){
     mdl.trd1.start();
     mdl.trd2.start();
 }
-
 ```
+
 **Starvation: **a thread or process can never get the lock to process its work. It can happen when high priority thread continuously uses the resources preventing low priority process to acquire the resource. For example, A high priority process A will run before a low priority process B. If A asks for lock all the time, then B will never be able to gain the lock.
 
-
-
-
 ### Computer Network:
-**TCP**: 
-**UDP**:
 
- 
+TCP and UDP are protocols used to send bits of data, known as packets over the Internet. They both build on top of internet protocol\(IP\), so the packets are send to an IP address. TCP/IP means TCP over IP, UDP/IP too.
 
-
+**TCP\(Transmission Control Protocol\)**: TCP is the most commonly used protocol on the Internet. TCP guarantees the recipient will receive the packets in order by numbering them. The recipient sends messages back to the sender saying it received the messages. If the sender does not get a correct response, it will resend the packets to ensure the recipient received them. Packets are also checked for errors. Packets sent with TCP are tracked so no data is lost or corrupted in transit. This is why file downloads do not become corrupted even if there are network hiccups.  
+**UDP\(User Datagram Protocol\)**: After send packages to the recipient. The sender will not wait to make sure the recipient received the packages. It will continue to send next packages. If you are recipient and you miss a package, there is no way to ask for it again. It make the communication more quickly. It's often used in live broadcast or online games.
 
