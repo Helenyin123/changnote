@@ -1,10 +1,10 @@
 # Summary
 
 * [ReadMe](README.md)
-* [Web Project](Chapter1)
+* [Web Project](Chapter1/README.md)
   * [Frontend - Web Project](Chapter1/frontend.md)
   * [Backend - Web Project](Chapter1/backend.md)
-* [Algorithm](Chapter2)
+* [Algorithm](Chapter2/README.md)
   * [Leetcode](Chapter2/leetcode.md)
   * [复习默写代码](Chapter2/fu-xi-mo-xie-dai-ma.md)
 * [DataBase](database.md)
