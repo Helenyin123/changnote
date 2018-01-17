@@ -28,7 +28,7 @@
         "pageNumbers": false,
         "paperSize": "a4"
     },
-    "plugins": ["katex","splitter"],
+    "plugins": ["mathjax","-splitter","prism","-highlight"],
     "title": "Chang's GitBook",
     "variables": {}
 }
