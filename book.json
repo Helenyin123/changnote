@@ -21,7 +21,7 @@
     "extension": null,
 
     // Plugins list, can contain "-name" for removing default plugins
-    "plugins": [],
+    "plugins": ["katex-plus"],
 
     // Global configuration for plugins
     "pluginsConfig": {
