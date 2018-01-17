@@ -12,9 +12,7 @@
             "twitter": null,
             "weibo": null
         },
-        "sidebar": {
-            "Blog": "http://www.chengweiyang.cn"
-        }
+        "sidebar": {}
     },
     "output": null,
     "pdf": {
@@ -30,7 +28,7 @@
         "pageNumbers": false,
         "paperSize": "a4"
     },
-    "plugins": ["katex-plus"],
+    "plugins": ["katex-plus","splitter"],
     "title": "Chang's GitBook",
     "variables": {}
 }
