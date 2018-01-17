@@ -28,7 +28,7 @@
         "pageNumbers": false,
         "paperSize": "a4"
     },
-    "plugins": ["katex","prism","-highlight","atoc"],
+    "plugins": ["katex","prism","-highlight","expandable-chapters", "redirect"],
     "title": "Chang's GitBook",
     "variables": {}
 }
