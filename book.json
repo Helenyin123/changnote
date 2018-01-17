@@ -34,8 +34,8 @@
 现在，修改一些配置，修改后为：
 
 {
-    "author": "Chengwei Yang <me@chengweiyang.cn>",
-    "description": "This is a sample book created by gitbook",
+    "author": "Chang Yin <yin100@usc.edu>",
+    "description": "This is a note write by Chang Yin",
     "extension": null,
     "generator": "site",
     "isbn": null,
@@ -48,7 +48,7 @@
             "weibo": null
         },
         "sidebar": {
-            "Chengwei's Blog": "http://www.chengweiyang.cn"
+            "Blog": "http://www.chengweiyang.cn"
         }
     },
     "output": null,
@@ -65,7 +65,7 @@
         "pageNumbers": false,
         "paperSize": "a4"
     },
-    "plugins": [],
-    "title": "Sample GitBook",
+    "plugins": ["katex-plus"],
+    "title": "Chang's GitBook",
     "variables": {}
 }
