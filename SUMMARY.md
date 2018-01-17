@@ -1,6 +1,6 @@
 # Summary
 
-* [ReadMe](README.md)
+* [README](README.md)
 * [Web Project](part1/README.md)
   * [Frontend - Web Project](part1/frontend.md)
   * [Backend - Web Project](part1/backend.md)
