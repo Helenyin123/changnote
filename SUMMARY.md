@@ -1,6 +1,6 @@
 # Summary
 * [ReadMe](README.md)
-* [Web Project](part1/web-project.md)
+* [Web Project](part1)
     * [Frontend - Web Project](part1/frontend.md)
     * [Backend - Web Project](part1/backend.md)
 * [DataBase](database.md)
