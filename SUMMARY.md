@@ -1,8 +1,8 @@
 # Summary
 * [ReadMe](README.md)
-* [Web Project](part1)
-    * [Frontend - Web Project](part1/frontend.md)
-    * [Backend - Web Project](part1/backend.md)
+* [Web Project](Chapter1)
+    * [Frontend - Web Project](Chapter1/frontend.md)
+    * [Backend - Web Project](Chapter1/backend.md)
 * [DataBase](database.md)
 * [Languages and OOP Basic Knowledge](chapter1.md)
 * [System Design](system-design.md)
