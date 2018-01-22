@@ -564,3 +564,4 @@ There are 7 RESTful routes, it's a pattern and a convention to structure your ro
 #### User Authorization
 **Authorization**: Once you know who someone is, you figure out what they are allowed to do.
 
+**index.js**: if we require a directory, the system will automatically require the content in index.js
