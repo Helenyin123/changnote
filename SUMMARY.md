@@ -13,4 +13,5 @@
 * [Interview Behavior Preparation](interview-behavior-preparation.md)
 * [Markdown Notes](markdown-notes.md)
 * [Qt Project](qt-project.md)
+* [C++ Tutorial](c++-tutorial.md)
 
